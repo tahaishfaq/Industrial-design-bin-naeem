@@ -157,7 +157,61 @@ The contact form sends emails using your cPanel email accounts via SMTP. Make su
 
 ## Production Deployment
 
-For production:
+### Deploying to Render
+
+Render doesn't have PHP in the standard language dropdown, but you can deploy using Docker:
+
+1. **Push your code to GitHub/GitLab**
+   ```bash
+   git add .
+   git commit -m "Prepare for deployment"
+   git push origin main
+   ```
+
+2. **Connect to Render**
+   - Go to [render.com](https://render.com)
+   - Sign up/Login
+   - Click "New +" → "Web Service"
+   - Connect your GitHub repository
+
+3. **Configure the Service**
+   - **Name**: `bin-naeem-industries` (or your preferred name)
+   - **Region**: Choose closest to your users
+   - **Branch**: `main` (or your default branch)
+   - **Root Directory**: Leave empty
+   - **Runtime**: Select **Docker** (this is available in the dropdown)
+   - **Dockerfile Path**: `./Dockerfile` (should auto-detect)
+
+4. **Set Environment Variables**
+   In Render dashboard, go to "Environment" tab and add:
+   ```
+   SMTP_HOST=your-smtp-host
+   SMTP_PORT=587
+   SMTP_USERNAME=your-email@domain.com
+   SMTP_PASSWORD=your-password
+   SMTP_FROM_EMAIL=info@binnaeemindustries.com
+   SMTP_FROM_NAME=Bin Naaem Industries
+   SMTP_TO_EMAIL=info@binnaeemindustries.com
+   ```
+
+5. **Deploy**
+   - Click "Create Web Service"
+   - Render will build and deploy automatically
+   - Your site will be available at `https://your-app-name.onrender.com`
+
+**Note**: Free tier services spin down after 15 minutes of inactivity. First request after spin-down may take 30-60 seconds.
+
+### Alternative: Using render.yaml
+
+If you prefer configuration as code, you can use the included `render.yaml`:
+
+1. Push your code with `render.yaml` included
+2. In Render dashboard, select "Apply Render Configuration"
+3. Render will read the configuration automatically
+
+### Traditional Server Deployment
+
+For production on a traditional server:
 
 1. Set up a proper web server (Apache/Nginx)
 2. Point the document root to the `public/` directory
