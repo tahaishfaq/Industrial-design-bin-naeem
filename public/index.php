@@ -1,8 +1,8 @@
 <?php
 require_once __DIR__ . '/../includes/config.php';
 
-$title       = 'Bin Naaem Industries';
-$description = 'Engineering tomorrow\'s industrial reality & infrastructure. Infrastructure, energy, logistics, and manufacturing.';
+$title       = 'Industrial Design and Manufacturing Solutions, Naeem Group';
+$description = 'Industrial design, manufacturing, packaging, and infrastructure solutions across Pakistan and the MENA region. Book a consultation.';
 $canonical   = 'https://binnaeemindustries.com/';
 $currentPage = 'home';
 $showWhatsApp = true;
@@ -80,10 +80,13 @@ require INCLUDES_PATH . '/page-start.php';
             weaving a tapestry of technical artistry and sustainable growth.
             With the timeless essence of industrial progress.
           </p>
-          <a class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-gray-300 dark:border-gray-600 hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-all text-xs font-bold tracking-widest uppercase" href="leadership.php">
-            Learn More
-            <span class="material-icons-outlined text-sm">north_east</span>
-          </a>
+          <div class="flex flex-wrap gap-4">
+            <a class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-gray-300 dark:border-gray-600 hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-all text-xs font-bold tracking-widest uppercase" href="capabilities.php">Capabilities</a>
+            <a class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-gray-300 dark:border-gray-600 hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-all text-xs font-bold tracking-widest uppercase" href="industries.php">Industries</a>
+            <a class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-gray-300 dark:border-gray-600 hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-all text-xs font-bold tracking-widest uppercase" href="projects.php">Projects</a>
+            <a class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-gray-300 dark:border-gray-600 hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-all text-xs font-bold tracking-widest uppercase" href="certifications.php">Certifications</a>
+            <a class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-gray-300 dark:border-gray-600 hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-all text-xs font-bold tracking-widest uppercase" href="contact.php">Contact</a>
+          </div>
         </div>
       </div>
     </div>
@@ -129,7 +132,7 @@ require INCLUDES_PATH . '/page-start.php';
       <button type="button" class="w-10 h-10 rounded-full border border-gray-300 dark:border-gray-600 flex items-center justify-center hover:bg-gray-100 dark:hover:bg-white/10 transition-colors" aria-label="Previous"><span class="material-icons-outlined text-sm dark:text-white">west</span></button>
       <button type="button" class="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center hover:bg-gray-200 transition-colors" aria-label="Next"><span class="material-icons-outlined text-sm">east</span></button>
       <div class="h-[1px] bg-gray-300 dark:bg-gray-700 flex-grow ml-4"></div>
-      <a class="text-xs font-bold uppercase tracking-widest text-gray-900 dark:text-white" href="industries.php">See all projects</a>
+      <a class="text-xs font-bold uppercase tracking-widest text-gray-900 dark:text-white" href="projects.php">See all projects</a>
     </div>
   </div>
 </section>
@@ -201,10 +204,9 @@ require INCLUDES_PATH . '/page-start.php';
       </div>
       <div class="md:w-2/3">
         <h2 class="font-display text-3xl md:text-4xl lg:text-5xl text-gray-900 dark:text-white leading-tight">
-          Award is a pixel that
-          <span class="text-gray-500">reflecting</span> our ongoing
+          Awards reflect our ongoing
           <span class="font-bold">dedication</span> to innovation and
-          excellence.
+          excellence. Available on request, certifications and technical documentation.
         </h2>
       </div>
     </div>

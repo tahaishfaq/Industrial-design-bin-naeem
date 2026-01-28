@@ -1,8 +1,8 @@
 <?php
 require_once __DIR__ . '/../includes/config.php';
 
-$title = 'Capabilities | Bin Naaem Industries';
-$description = 'Manufacturing capabilities across packaging, plastics, and construction. Precision engineering at macro and micro scales.';
+$title = 'Industrial Manufacturing and Material Capabilities, Naeem Group';
+$description = 'Precision manufacturing, advanced materials, production scale, and quality systems for industrial clients.';
 $canonical = 'https://binnaeemindustries.com/capabilities';
 $currentPage = 'capabilities';
 
@@ -159,6 +159,9 @@ require INCLUDES_PATH . '/page-start.php';
           <p class="text-gray-300 text-lg font-light max-w-2xl">Our strategic locations near major ports ensure that scale never compromises speed. We deliver heavy industry solutions to any corner of the globe.</p>
         </div>
       </div>
+    </div>
+    <div class="mt-20 text-center">
+      <p class="text-gray-600 dark:text-gray-400 mb-6">Explore our <a href="projects.php" class="text-gray-900 dark:text-white underline hover:no-underline">project portfolio</a> or <a href="contact.php" class="text-gray-900 dark:text-white underline hover:no-underline">contact us</a> to discuss your requirements.</p>
     </div>
   </div>
 </section>

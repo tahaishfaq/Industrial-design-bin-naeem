@@ -1,8 +1,8 @@
 <?php
 require_once __DIR__ . '/../includes/config.php';
 
-$title = 'Quality Assurance &amp; Certifications | Bin Naaem Industries';
-$description = 'Bin Naaem Industries quality assurance, certifications, and engineering standards. ISO and industry compliance.';
+$title = 'Certifications and Compliance, Naeem Group';
+$description = 'ISO and compliance standards, safety programs, sustainability commitments, and documentation.';
 $canonical = 'https://binnaeemindustries.com/certifications';
 $currentPage = 'certifications';
 
@@ -33,22 +33,80 @@ require INCLUDES_PATH . '/page-start.php';
         <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed max-w-2xl">We maintain rigorous quality management systems and hold industry-recognized certifications to ensure compliance, safety, and excellence across all operations.</p>
       </div>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
       <div class="p-10 border border-gray-200 dark:border-gray-800 rounded-2xl bg-surface-light dark:bg-surface-dark hover:border-gray-400 dark:hover:border-gray-600 transition-colors">
         <div class="w-14 h-14 rounded-full bg-white/5 dark:bg-black/20 flex items-center justify-center mb-6"><span class="material-icons-outlined text-2xl text-gray-900 dark:text-white">verified</span></div>
-        <h4 class="font-display text-2xl text-gray-900 dark:text-white mb-3">ISO 9001</h4>
-        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">Quality management systems certification ensuring consistent processes and continuous improvement.</p>
+        <h3 class="font-display text-2xl text-gray-900 dark:text-white mb-2">ISO 9001</h3>
+        <p class="text-gray-500 dark:text-gray-400 text-xs mb-4">International Organization for Standardization</p>
+        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">Quality management systems certification ensuring consistent processes and continuous improvement across all operations.</p>
+        <p class="text-gray-500 dark:text-gray-400 text-xs mb-2">Status: <span class="text-green-600 dark:text-green-400 font-medium">Active</span></p>
+        <a href="#" class="inline-flex items-center gap-2 text-xs font-semibold text-gray-900 dark:text-white hover:underline">
+          Download Certificate PDF
+          <span class="material-icons-outlined text-sm">download</span>
+        </a>
       </div>
       <div class="p-10 border border-gray-200 dark:border-gray-800 rounded-2xl bg-surface-light dark:bg-surface-dark hover:border-gray-400 dark:hover:border-gray-600 transition-colors">
         <div class="w-14 h-14 rounded-full bg-white/5 dark:bg-black/20 flex items-center justify-center mb-6"><span class="material-icons-outlined text-2xl text-gray-900 dark:text-white">health_and_safety</span></div>
-        <h4 class="font-display text-2xl text-gray-900 dark:text-white mb-3">Safety Excellence</h4>
-        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">Global Safety Excellence Award recognition and robust OH&amp;S protocols across all facilities.</p>
+        <h3 class="font-display text-2xl text-gray-900 dark:text-white mb-2">Safety Excellence Award</h3>
+        <p class="text-gray-500 dark:text-gray-400 text-xs mb-4">Global Safety Council</p>
+        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">Recognition for robust occupational health and safety protocols and zero incident performance across all facilities.</p>
+        <p class="text-gray-500 dark:text-gray-400 text-xs mb-2">Status: <span class="text-green-600 dark:text-green-400 font-medium">Active</span></p>
+        <a href="#" class="inline-flex items-center gap-2 text-xs font-semibold text-gray-900 dark:text-white hover:underline">
+          Download Certificate PDF
+          <span class="material-icons-outlined text-sm">download</span>
+        </a>
       </div>
       <div class="p-10 border border-gray-200 dark:border-gray-800 rounded-2xl bg-surface-light dark:bg-surface-dark hover:border-gray-400 dark:hover:border-gray-600 transition-colors">
         <div class="w-14 h-14 rounded-full bg-white/5 dark:bg-black/20 flex items-center justify-center mb-6"><span class="material-icons-outlined text-2xl text-gray-900 dark:text-white">eco</span></div>
-        <h4 class="font-display text-2xl text-gray-900 dark:text-white mb-3">Sustainable Practice</h4>
-        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">Sustainable manufacturing and environmental stewardship aligned with international standards.</p>
+        <h3 class="font-display text-2xl text-gray-900 dark:text-white mb-2">Environmental Management</h3>
+        <p class="text-gray-500 dark:text-gray-400 text-xs mb-4">Sustainable Manufacturing Standards</p>
+        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">Sustainable manufacturing and environmental stewardship aligned with international standards and best practices.</p>
+        <p class="text-gray-500 dark:text-gray-400 text-xs mb-2">Status: <span class="text-green-600 dark:text-green-400 font-medium">Active</span></p>
+        <a href="#" class="inline-flex items-center gap-2 text-xs font-semibold text-gray-900 dark:text-white hover:underline">
+          Download Certificate PDF
+          <span class="material-icons-outlined text-sm">download</span>
+        </a>
       </div>
+      <div class="p-10 border border-gray-200 dark:border-gray-800 rounded-2xl bg-surface-light dark:bg-surface-dark hover:border-gray-400 dark:hover:border-gray-600 transition-colors">
+        <div class="w-14 h-14 rounded-full bg-white/5 dark:bg-black/20 flex items-center justify-center mb-6"><span class="material-icons-outlined text-2xl text-gray-900 dark:text-white">factory</span></div>
+        <h3 class="font-display text-2xl text-gray-900 dark:text-white mb-2">ISO 14001</h3>
+        <p class="text-gray-500 dark:text-gray-400 text-xs mb-4">International Organization for Standardization</p>
+        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">Environmental management systems ensuring sustainable operations and compliance with environmental regulations.</p>
+        <p class="text-gray-500 dark:text-gray-400 text-xs mb-2">Status: <span class="text-green-600 dark:text-green-400 font-medium">Active</span></p>
+        <a href="#" class="inline-flex items-center gap-2 text-xs font-semibold text-gray-900 dark:text-white hover:underline">
+          Download Certificate PDF
+          <span class="material-icons-outlined text-sm">download</span>
+        </a>
+      </div>
+      <div class="p-10 border border-gray-200 dark:border-gray-800 rounded-2xl bg-surface-light dark:bg-surface-dark hover:border-gray-400 dark:hover:border-gray-600 transition-colors">
+        <div class="w-14 h-14 rounded-full bg-white/5 dark:bg-black/20 flex items-center justify-center mb-6"><span class="material-icons-outlined text-2xl text-gray-900 dark:text-white">security</span></div>
+        <h3 class="font-display text-2xl text-gray-900 dark:text-white mb-2">ISO 45001</h3>
+        <p class="text-gray-500 dark:text-gray-400 text-xs mb-4">International Organization for Standardization</p>
+        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">Occupational health and safety management systems ensuring worker safety and regulatory compliance.</p>
+        <p class="text-gray-500 dark:text-gray-400 text-xs mb-2">Status: <span class="text-green-600 dark:text-green-400 font-medium">Active</span></p>
+        <a href="#" class="inline-flex items-center gap-2 text-xs font-semibold text-gray-900 dark:text-white hover:underline">
+          Download Certificate PDF
+          <span class="material-icons-outlined text-sm">download</span>
+        </a>
+      </div>
+      <div class="p-10 border border-gray-200 dark:border-gray-800 rounded-2xl bg-surface-light dark:bg-surface-dark hover:border-gray-400 dark:hover:border-gray-600 transition-colors">
+        <div class="w-14 h-14 rounded-full bg-white/5 dark:bg-black/20 flex items-center justify-center mb-6"><span class="material-icons-outlined text-2xl text-gray-900 dark:text-white">verified_user</span></div>
+        <h3 class="font-display text-2xl text-gray-900 dark:text-white mb-2">Quality Assurance Program</h3>
+        <p class="text-gray-500 dark:text-gray-400 text-xs mb-4">Internal Quality Standards</p>
+        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">Comprehensive quality assurance program with regular audits and continuous improvement processes.</p>
+        <p class="text-gray-500 dark:text-gray-400 text-xs mb-2">Status: <span class="text-green-600 dark:text-green-400 font-medium">Active</span></p>
+        <a href="#" class="inline-flex items-center gap-2 text-xs font-semibold text-gray-900 dark:text-white hover:underline">
+          Download Certificate PDF
+          <span class="material-icons-outlined text-sm">download</span>
+        </a>
+      </div>
+    </div>
+    <div class="max-w-3xl mx-auto text-center mb-12">
+      <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-8">Certificates and audit documentation are available on request. Available on request, certifications and technical documentation.</p>
+      <a href="contact.php" class="inline-flex items-center gap-3 bg-gray-900 dark:bg-white text-white dark:text-black px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-800 dark:hover:bg-gray-100 transition-all">
+        Request Compliance Pack
+        <span class="material-icons-outlined text-sm">arrow_forward</span>
+      </a>
     </div>
   </div>
 </section>

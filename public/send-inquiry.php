@@ -17,10 +17,14 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
   exit;
 }
 
-$name    = isset($_POST['name']) ? trim(strip_tags((string) $_POST['name'])) : '';
-$email   = isset($_POST['email']) ? trim(filter_var((string) $_POST['email'], FILTER_SANITIZE_EMAIL)) : '';
-$company = isset($_POST['company']) ? trim(strip_tags((string) $_POST['company'])) : '';
-$message = isset($_POST['message']) ? trim(strip_tags((string) $_POST['message'])) : '';
+$name         = isset($_POST['name']) ? trim(strip_tags((string) $_POST['name'])) : '';
+$email        = isset($_POST['email']) ? trim(filter_var((string) $_POST['email'], FILTER_SANITIZE_EMAIL)) : '';
+$company      = isset($_POST['company']) ? trim(strip_tags((string) $_POST['company'])) : '';
+$industry     = isset($_POST['industry']) ? trim(strip_tags((string) $_POST['industry'])) : '';
+$projectType  = isset($_POST['project_type']) ? trim(strip_tags((string) $_POST['project_type'])) : '';
+$timeline     = isset($_POST['timeline']) ? trim(strip_tags((string) $_POST['timeline'])) : '';
+$budget       = isset($_POST['budget']) ? trim(strip_tags((string) $_POST['budget'])) : '';
+$message      = isset($_POST['message']) ? trim(strip_tags((string) $_POST['message'])) : '';
 
 $valid = true;
 if ($name === '' || strlen($name) < 2) $valid = false;
@@ -63,6 +67,18 @@ try {
   if (!empty($company)) {
     $htmlBody .= "<p><strong>Company:</strong> " . htmlspecialchars($company) . "</p>";
   }
+  if (!empty($industry)) {
+    $htmlBody .= "<p><strong>Industry:</strong> " . htmlspecialchars($industry) . "</p>";
+  }
+  if (!empty($projectType)) {
+    $htmlBody .= "<p><strong>Project Type:</strong> " . htmlspecialchars($projectType) . "</p>";
+  }
+  if (!empty($timeline)) {
+    $htmlBody .= "<p><strong>Timeline:</strong> " . htmlspecialchars($timeline) . "</p>";
+  }
+  if (!empty($budget)) {
+    $htmlBody .= "<p><strong>Budget Range:</strong> " . htmlspecialchars($budget) . "</p>";
+  }
   $htmlBody .= "<p><strong>Message:</strong></p>";
   $htmlBody .= "<p style='background: #f5f5f5; padding: 15px; border-radius: 5px; white-space: pre-wrap;'>" . nl2br(htmlspecialchars($message)) . "</p>";
   $htmlBody .= "</body></html>";
@@ -75,6 +91,18 @@ try {
   $textBody .= "Email: " . htmlspecialchars($email) . "\n";
   if (!empty($company)) {
     $textBody .= "Company: " . htmlspecialchars($company) . "\n";
+  }
+  if (!empty($industry)) {
+    $textBody .= "Industry: " . htmlspecialchars($industry) . "\n";
+  }
+  if (!empty($projectType)) {
+    $textBody .= "Project Type: " . htmlspecialchars($projectType) . "\n";
+  }
+  if (!empty($timeline)) {
+    $textBody .= "Timeline: " . htmlspecialchars($timeline) . "\n";
+  }
+  if (!empty($budget)) {
+    $textBody .= "Budget Range: " . htmlspecialchars($budget) . "\n";
   }
   $textBody .= "\nMessage:\n" . htmlspecialchars($message) . "\n";
   

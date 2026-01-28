@@ -29,5 +29,37 @@ $seoSiteName    = 'Bin Naaem Industries';
 <meta name="twitter:description" content="<?php echo htmlspecialchars($seoDesc, ENT_QUOTES, 'UTF-8'); ?>">
 <meta name="twitter:image" content="<?php echo htmlspecialchars($seoOgImage, ENT_QUOTES, 'UTF-8'); ?>">
 
-<?php /* Schema placeholder — add JSON-LD per page when needed */ ?>
-<!-- Schema.org placeholders: Organization, WebPage, etc. -->
+<?php
+// JSON-LD Structured Data - Organization Schema
+$orgSchema = [
+  '@context' => 'https://schema.org',
+  '@type' => 'Organization',
+  'name' => 'Naeem Group',
+  'alternateName' => 'Bin Naaem Industries',
+  'url' => 'https://binnaeemindustries.com',
+  'logo' => 'https://binnaeemindustries.com/',
+  'description' => 'Industrial design, manufacturing, packaging, and infrastructure solutions across Pakistan and the MENA region.',
+  'address' => [
+    '@type' => 'PostalAddress',
+    'streetAddress' => 'Jalil Centre, 231-Circular Road, Bhati Gate',
+    'addressLocality' => 'Lahore',
+    'postalCode' => '54000',
+    'addressCountry' => 'PK'
+  ],
+  'contactPoint' => [
+    '@type' => 'ContactPoint',
+    'telephone' => '+92-42-37311809',
+    'contactType' => 'Customer Service',
+    'email' => 'info@binnaeemindustries.com',
+    'areaServed' => 'PK',
+    'availableLanguage' => ['en', 'ur']
+  ],
+  'sameAs' => [
+    'https://www.instagram.com/binnaeemindustries',
+    'https://www.facebook.com/binnaeemindustries'
+  ]
+];
+?>
+<script type="application/ld+json">
+<?php echo json_encode($orgSchema, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT); ?>
+</script>

@@ -12,7 +12,8 @@ $base = (isset($isBrand) && $isBrand) ? '../' : '';
     <div class="hidden md:flex items-center bg-white/10 dark:bg-black/20 backdrop-blur-md rounded-full px-8 py-3 border border-gray-200/20 dark:border-white/10 shadow-lg">
       <a class="px-4 text-sm font-medium <?php echo $navCurrent === 'home' ? 'text-white' : 'hover:text-gray-500 dark:hover:text-gray-300 transition-colors'; ?>" href="<?php echo $base . $u('index.php'); ?>">Home</a>
       <a class="px-4 text-sm font-medium <?php echo $navCurrent === 'capabilities' ? 'text-white' : 'hover:text-gray-500 dark:hover:text-gray-300 transition-colors'; ?>" href="<?php echo $base . $u('capabilities.php'); ?>">Services</a>
-      <a class="px-4 text-sm font-medium <?php echo $navCurrent === 'industries' ? 'text-white' : 'hover:text-gray-500 dark:hover:text-gray-300 transition-colors'; ?>" href="<?php echo $base . $u('industries.php'); ?>">Projects</a>
+      <a class="px-4 text-sm font-medium <?php echo $navCurrent === 'projects' ? 'text-white' : 'hover:text-gray-500 dark:hover:text-gray-300 transition-colors'; ?>" href="<?php echo $base . $u('projects.php'); ?>">Projects</a>
+      <a class="px-4 text-sm font-medium <?php echo $navCurrent === 'industries' ? 'text-white' : 'hover:text-gray-500 dark:hover:text-gray-300 transition-colors'; ?>" href="<?php echo $base . $u('industries.php'); ?>">Industries</a>
       <a class="px-4 text-sm font-medium <?php echo $navCurrent === 'brands' ? 'text-white' : 'hover:text-gray-500 dark:hover:text-gray-300 transition-colors'; ?>" href="<?php echo $base . $u('brands.php'); ?>">Brands</a>
       <a class="px-4 text-sm font-medium <?php echo $navCurrent === 'leadership' ? 'text-white' : 'hover:text-gray-500 dark:hover:text-gray-300 transition-colors'; ?>" href="<?php echo $base . $u('leadership.php'); ?>">About</a>
     </div>

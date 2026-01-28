@@ -48,7 +48,8 @@ $base = (isset($isBrand) && $isBrand) ? '../' : '';
           <div class="flex flex-col gap-2 text-sm">
             <a class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors" href="<?php echo $base; ?>index.php">Home</a>
             <a class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors" href="<?php echo $base; ?>capabilities.php">Services</a>
-            <a class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors" href="<?php echo $base; ?>industries.php">Projects</a>
+            <a class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors" href="<?php echo $base; ?>projects.php">Projects</a>
+            <a class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors" href="<?php echo $base; ?>industries.php">Industries</a>
             <a class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors" href="<?php echo $base; ?>brands.php">Brands</a>
           </div>
         </div>

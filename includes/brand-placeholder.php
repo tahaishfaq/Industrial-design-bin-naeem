@@ -16,7 +16,10 @@
 </header>
 <section class="py-24 px-6 md:px-12 bg-background-light dark:bg-background-dark">
   <div class="max-w-[1600px] mx-auto">
-    <h2 class="font-display text-4xl md:text-5xl text-gray-900 dark:text-white mb-8">Get in <span class="italic font-light text-gray-500">touch</span></h2>
+    <div class="mb-12">
+      <h2 class="font-display text-4xl md:text-5xl text-gray-900 dark:text-white mb-8">Get in <span class="italic font-light text-gray-500">touch</span></h2>
+      <p class="text-gray-600 dark:text-gray-400 mb-6">Explore our <a href="../projects.php" class="text-gray-900 dark:text-white underline hover:no-underline">project portfolio</a> or <a href="../contact.php" class="text-gray-900 dark:text-white underline hover:no-underline">contact us</a> to discuss your requirements.</p>
+    </div>
     <div class="max-w-xl">
       <?php $inquiryFormAction = '../send-inquiry.php'; include INCLUDES_PATH . '/inquiry-form.php'; ?>
     </div>

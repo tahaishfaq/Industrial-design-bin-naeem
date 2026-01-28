@@ -1,8 +1,8 @@
 <?php
 require_once __DIR__ . '/../includes/config.php';
 
-$title = 'Our Brands | Bin Naaem Industries';
-$description = 'A collective of industry leaders and innovators. Box Pack, Mondsub, Hanplas, BN Energy, BN Construct, BN Logistics, Naeem Packages.';
+$title = 'Brands and Subsidiaries, Naeem Group';
+$description = 'Explore our industrial and consumer subsidiaries and the solutions they deliver.';
 $canonical = 'https://binnaeemindustries.com/brands';
 $currentPage = 'brands';
 

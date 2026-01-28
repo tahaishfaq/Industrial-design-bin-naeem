@@ -1,8 +1,8 @@
 <?php
 require_once __DIR__ . '/../includes/config.php';
 
-$title = 'Terms &amp; Conditions | Bin Naaem Industries';
-$description = 'Terms and conditions of use for Bin Naaem Industries website and services.';
+$title = 'Terms and Conditions, Naeem Group';
+$description = 'Terms governing the use of our site and services.';
 $canonical = 'https://binnaeemindustries.com/terms';
 $currentPage = 'terms';
 

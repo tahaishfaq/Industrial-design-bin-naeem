@@ -1,8 +1,8 @@
 <?php
 require_once __DIR__ . '/../includes/config.php';
 
-$title = 'Privacy Policy | Bin Naaem Industries';
-$description = 'Privacy policy and data handling practices for Bin Naaem Industries.';
+$title = 'Privacy Policy, Naeem Group';
+$description = 'How we collect, use, and protect your information.';
 $canonical = 'https://binnaeemindustries.com/privacy-policy';
 $currentPage = 'privacy';
 

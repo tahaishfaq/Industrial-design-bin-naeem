@@ -1,8 +1,8 @@
 <?php
 require_once __DIR__ . '/../includes/config.php';
 
-$title = 'Leadership &amp; Vision | Bin Naaem Industries';
-$description = 'Governance, vision, and executive leadership. Guided by experience, driven by insight.';
+$title = 'Leadership and Company Overview, Naeem Group';
+$description = 'Our leadership team, mission, values, and commitment to industrial excellence and safety.';
 $canonical = 'https://binnaeemindustries.com/leadership';
 $currentPage = 'leadership';
 

@@ -19,7 +19,7 @@ require INCLUDES_PATH . '/page-start.php';
   <div class="relative z-10 flex flex-col justify-end h-full px-6 md:px-12 pb-20 max-w-[1600px] mx-auto">
     <div class="flex flex-col md:flex-row items-end justify-between gap-12">
       <div class="max-w-4xl">
-        <span class="inline-block py-1 px-3 rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-xs font-bold tracking-widest uppercase mb-6 text-gray-300">Subsidiary — Consumer Products</span>
+        <span class="inline-block py-1 px-3 rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-xs font-bold tracking-widest uppercase mb-6 text-gray-300">Subsidiary, Consumer Products</span>
         <h1 class="font-display text-5xl md:text-7xl lg:text-8xl leading-[1.1] text-white">House of <br/><span class="italic font-light text-gray-400">Piñatas</span></h1>
         <p class="mt-8 text-lg md:text-xl text-gray-300 max-w-2xl font-light border-l border-white/20 pl-6">Celebrating life's moments with premium, handcrafted piñatas and party supplies. Where tradition meets innovation in festive manufacturing.</p>
       </div>

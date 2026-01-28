@@ -1,8 +1,8 @@
 <?php
 require_once __DIR__ . '/../includes/config.php';
 
-$title = 'Industries We Serve | Bin Naaem Industries';
-$description = 'Engineering precision across FMCG, food &amp; beverage, construction, and consumer solutions.';
+$title = 'Industrial Sectors We Serve, Naeem Group';
+$description = 'Industrial solutions for FMCG, food and beverage, construction, manufacturing, and logistics.';
 $canonical = 'https://binnaeemindustries.com/industries';
 $currentPage = 'industries';
 
@@ -99,6 +99,9 @@ require INCLUDES_PATH . '/page-start.php';
         </div>
       </div>
     </div>
+  </div>
+  <div class="mt-20 text-center">
+    <p class="text-gray-600 dark:text-gray-400 mb-6">View our <a href="projects.php" class="text-gray-900 dark:text-white underline hover:no-underline">completed projects</a> or <a href="contact.php" class="text-gray-900 dark:text-white underline hover:no-underline">get in touch</a> to discuss your industry needs.</p>
   </div>
 </section>
 

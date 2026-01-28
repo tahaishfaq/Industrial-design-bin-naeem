@@ -209,15 +209,24 @@ If you prefer configuration as code, you can use the included `render.yaml`:
 2. In Render dashboard, select "Apply Render Configuration"
 3. Render will read the configuration automatically
 
-### Traditional Server Deployment
+### Traditional Server / cPanel Deployment
 
-For production on a traditional server:
+For production on a traditional server or cPanel hosting:
 
-1. Set up a proper web server (Apache/Nginx)
-2. Point the document root to the `public/` directory
-3. Ensure `.env` is properly configured with production credentials
-4. Make sure `vendor/` directory is accessible
+**📖 See [CPANEL_DEPLOYMENT.md](CPANEL_DEPLOYMENT.md) for complete step-by-step guide**
+
+Quick steps:
+1. Upload files to cPanel `public_html/`
+2. Set document root to `public/` directory (or use `.htaccess`)
+3. Install Composer dependencies via SSH
+4. Create `.env` file with SMTP settings
 5. Set proper file permissions
+6. Test the website and contact form
+
+**Files included for cPanel:**
+- `CPANEL_DEPLOYMENT.md` - Complete deployment guide
+- `deploy-cpanel.sh` - Automated deployment script
+- `.htaccess.cpanel` - Sample .htaccess for cPanel
 
 ## Troubleshooting
 
