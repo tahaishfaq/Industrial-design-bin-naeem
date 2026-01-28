@@ -1,0 +1,14 @@
+{
+  "name": "bin-naeem/industries",
+  "description": "Bin Naaem Industries corporate website",
+  "type": "project",
+  "require": {
+    "php": ">=7.4",
+    "phpmailer/phpmailer": "^6.9"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "includes/"
+    }
+  }
+}
