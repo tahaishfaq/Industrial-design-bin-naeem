@@ -138,7 +138,7 @@ Open your browser and navigate to:
 
 ## Features
 
-- ✅ Dark mode support (default)
+- ✅ Light and dark mode (default is light, with toggle)
 - ✅ Responsive design
 - ✅ Contact/inquiry forms with email notifications via cPanel SMTP
 - ✅ SEO optimization

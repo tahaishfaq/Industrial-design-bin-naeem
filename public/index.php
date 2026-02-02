@@ -20,7 +20,10 @@ require INCLUDES_PATH . '/page-start.php';
       width="1600"
       height="900"
     />
-    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background-light dark:to-background-dark opacity-90"></div>
+    <!-- Scrim: blend into page background without a heavy white wash -->
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute bottom-0 left-0 right-0 h-[38%] bg-gradient-to-b from-transparent to-background-light dark:to-background-dark"></div>
+    </div>
   </div>
   <div class="relative z-10 flex flex-col justify-end h-full px-6 md:px-12 pb-20 max-w-[1600px] mx-auto">
     <div class="mb-12 md:mb-24">
@@ -33,10 +36,10 @@ require INCLUDES_PATH . '/page-start.php';
     </div>
     <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-end">
       <div class="col-span-1 md:col-span-5 flex flex-wrap gap-3">
-        <span class="px-6 py-2 rounded-full border border-gray-400/30 dark:border-white/20 bg-white/10 dark:bg-black/30 backdrop-blur-sm text-sm dark:text-gray-200">Infrastructure</span>
-        <span class="px-6 py-2 rounded-full border border-gray-400/30 dark:border-white/20 bg-white/10 dark:bg-black/30 backdrop-blur-sm text-sm dark:text-gray-200">Energy</span>
-        <span class="px-6 py-2 rounded-full border border-gray-400/30 dark:border-white/20 bg-white/10 dark:bg-black/30 backdrop-blur-sm text-sm dark:text-gray-200">Logistics</span>
-        <span class="px-6 py-2 rounded-full border border-gray-400/30 dark:border-white/20 bg-white/10 dark:bg-black/30 backdrop-blur-sm text-sm dark:text-gray-200">Manufacturing</span>
+        <span class="px-6 py-2 rounded-full glass-soft text-sm text-gray-900 dark:text-gray-200">Infrastructure</span>
+        <span class="px-6 py-2 rounded-full glass-soft text-sm text-gray-900 dark:text-gray-200">Energy</span>
+        <span class="px-6 py-2 rounded-full glass-soft text-sm text-gray-900 dark:text-gray-200">Logistics</span>
+        <span class="px-6 py-2 rounded-full glass-soft text-sm text-gray-900 dark:text-gray-200">Manufacturing</span>
       </div>
       <div class="col-span-1 md:col-span-7 flex justify-end gap-4 overflow-x-auto no-scrollbar">
         <div class="relative w-64 h-40 rounded-xl overflow-hidden group cursor-pointer border border-white/10 flex-shrink-0">
@@ -158,8 +161,8 @@ require INCLUDES_PATH . '/page-start.php';
       <a href="brands.php" class="group relative rounded-2xl overflow-hidden aspect-[4/5] cursor-pointer block">
         <img alt="Solar Energy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter brightness-75 group-hover:brightness-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdo_fFfBNLBVSeVnMqsJYfWPqx2tQCeiHnBeVdmTGdcrsrnLuumD_uCAhhK3sPtGSXTif5u0QF9A0W2y4e6slVbEcOD5B-pomHxpm3f1kL2VKxf7SiXewulB4zhPEXo9DRXkJNFa-pGL-sJTkBziuohr1B2BRyYVngJVstjfkCX6kFcabukz6A16yrEBnn2wYvopefcU32w1QFSPoPX4hz_WmqvTbq-W2WdFU_1Wj9KPs265nf149pGsniaOLwchv6SqoDmbykrzE" loading="lazy" width="600" height="750" />
         <div class="absolute top-4 right-4 flex flex-wrap justify-end gap-2">
-          <span class="px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-[10px] text-white uppercase font-bold tracking-wide">Solar</span>
-          <span class="px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-[10px] text-white uppercase font-bold tracking-wide">Energy</span>
+          <span class="px-3 py-1 glass-soft rounded-full text-[10px] text-white uppercase font-bold tracking-wide">Solar</span>
+          <span class="px-3 py-1 glass-soft rounded-full text-[10px] text-white uppercase font-bold tracking-wide">Energy</span>
         </div>
         <div class="absolute bottom-0 inset-x-0 p-6 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
           <h4 class="text-2xl font-display text-white mb-2">Bin Naaem Energy</h4>
@@ -170,8 +173,8 @@ require INCLUDES_PATH . '/page-start.php';
       <a href="brands.php" class="group relative rounded-2xl overflow-hidden aspect-[4/5] cursor-pointer block">
         <img alt="Construction" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter brightness-75 group-hover:brightness-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFCE3TeM_RSmldhflkSqLbEJ9h1-T5bgoMF8rOIDxA4Ho7CHsOrEHmu9L9lAfI7noNfeBVecCVvGCYAAJvJIc319DT7M6iyZ2czw03YbFeFAQULMSoajuCehgtsZBGJiVq39ij2ivVPBRdjzGz1TMaBWJTYvNIcuLjfMdIWCdBmKjAlHk5t-K7s2NxT-9AOonBChV4NX5n2JkurSK5Q23gFKXkUla-JLbMqLcCOKiIDHqXHWZJYenv5cfOPBQbdJTgMrVNkyMSjwc" loading="lazy" width="600" height="750" />
         <div class="absolute top-4 right-4 flex flex-wrap justify-end gap-2">
-          <span class="px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-[10px] text-white uppercase font-bold tracking-wide">Build</span>
-          <span class="px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-[10px] text-white uppercase font-bold tracking-wide">Construct</span>
+          <span class="px-3 py-1 glass-soft rounded-full text-[10px] text-white uppercase font-bold tracking-wide">Build</span>
+          <span class="px-3 py-1 glass-soft rounded-full text-[10px] text-white uppercase font-bold tracking-wide">Construct</span>
         </div>
         <div class="absolute bottom-0 inset-x-0 p-6 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
           <h4 class="text-2xl font-display text-white mb-2">BN Construction</h4>
@@ -182,8 +185,8 @@ require INCLUDES_PATH . '/page-start.php';
       <a href="brands/naeem-packages.php" class="group relative rounded-2xl overflow-hidden aspect-[4/5] cursor-pointer block">
         <img alt="Logistics" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter brightness-75 group-hover:brightness-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0bikdpbTnJ3JPPNA0q3fKk9Dq1kLKuoXvLzBYdGrkCcm0CRu0iKMh35v_CUD3YFx6wSIEev3Pm8ZOHHvl4YVLHRNFgGwhp9UGXpT6_4aijCjld_fKddCFyVoEABYUta4Q85wyubBj-wXbcCyvUaA-dgBXNu_OZFc6sdPmTr1TE-WNtA2Qk1MIah20aA04hB25OX-y4ZGTY4VDDgCztn2TMbVy8zFcezieHpfAAMTHgfHL0oZJrD2l6X6FekGrLtXgsMEuTZByRQU" loading="lazy" width="600" height="750" />
         <div class="absolute top-4 right-4 flex flex-wrap justify-end gap-2">
-          <span class="px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-[10px] text-white uppercase font-bold tracking-wide">Global</span>
-          <span class="px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-[10px] text-white uppercase font-bold tracking-wide">Logistics</span>
+          <span class="px-3 py-1 glass-soft rounded-full text-[10px] text-white uppercase font-bold tracking-wide">Global</span>
+          <span class="px-3 py-1 glass-soft rounded-full text-[10px] text-white uppercase font-bold tracking-wide">Logistics</span>
         </div>
         <div class="absolute bottom-0 inset-x-0 p-6 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
           <h4 class="text-2xl font-display text-white mb-2">BN Logistics</h4>
