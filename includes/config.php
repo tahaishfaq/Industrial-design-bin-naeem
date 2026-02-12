@@ -42,6 +42,9 @@ $smtpFromEmail = $_ENV['SMTP_FROM_EMAIL'] ?? getenv('SMTP_FROM_EMAIL') ?? 'info@
 $smtpFromName = $_ENV['SMTP_FROM_NAME'] ?? getenv('SMTP_FROM_NAME') ?? 'Bin Naaem Industries';
 $smtpToEmail = $_ENV['SMTP_TO_EMAIL'] ?? getenv('SMTP_TO_EMAIL') ?? 'info@binnaeemindustries.com';
 
+// Google Analytics 4 (optional: set in .env as GA4_MEASUREMENT_ID to override)
+$ga4MeasurementId = $_ENV['GA4_MEASUREMENT_ID'] ?? getenv('GA4_MEASUREMENT_ID') ?? 'G-5D3XWNL69Q';
+
 function url($path) {
     global $baseUrl;
     $path = ltrim($path, '/');
