@@ -37,7 +37,7 @@ $orgSchema = [
   'name' => 'Naeem Group',
   'alternateName' => 'Bin Naaem Industries',
   'url' => 'https://binnaeemindustries.com',
-  'logo' => 'https://binnaeemindustries.com/',
+  'logo' => 'https://binnaeemindustries.com/assets/logos/bin-naeem.svg',
   'description' => 'Industrial design, manufacturing, packaging, and infrastructure solutions across Pakistan and the MENA region.',
   'address' => [
     '@type' => 'PostalAddress',
@@ -62,4 +62,31 @@ $orgSchema = [
 ?>
 <script type="application/ld+json">
 <?php echo json_encode($orgSchema, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT); ?>
+</script>
+<?php
+// LocalBusiness schema for local search
+$localBusinessSchema = [
+  '@context' => 'https://schema.org',
+  '@type' => 'LocalBusiness',
+  'name' => 'Bin Naaem Industries',
+  'alternateName' => 'Naeem Group',
+  'url' => 'https://binnaeemindustries.com',
+  'description' => 'Industrial design, manufacturing, packaging, and infrastructure solutions across Pakistan and the MENA region.',
+  'address' => [
+    '@type' => 'PostalAddress',
+    'streetAddress' => 'Jalil Centre, 231-Circular Road, Bhati Gate',
+    'addressLocality' => 'Lahore',
+    'postalCode' => '54000',
+    'addressCountry' => 'PK'
+  ],
+  'telephone' => '+92-42-37311809',
+  'email' => 'info@binnaeemindustries.com',
+  'sameAs' => [
+    'https://www.instagram.com/binnaeemindustries',
+    'https://www.facebook.com/binnaeemindustries'
+  ]
+];
+?>
+<script type="application/ld+json">
+<?php echo json_encode($localBusinessSchema, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT); ?>
 </script>

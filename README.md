@@ -155,6 +155,25 @@ The contact form sends emails using your cPanel email accounts via SMTP. Make su
 4. The `SMTP_PORT` matches your server configuration (587 for STARTTLS is recommended)
 5. The `SMTP_TO_EMAIL` is set to where you want to receive inquiries
 
+### Analytics and verification (optional)
+
+- **GA4_MEASUREMENT_ID**: Your Google Analytics 4 Measurement ID (e.g. `G-XXXXXXXXXX`). When set, the site loads the gtag script; loading is gated by cookie consent until the user accepts.
+- **GSC_VERIFICATION**: Google Search Console verification string (content of the meta tag). When set, the verification meta tag is output in the `<head>`.
+
+### Cookie consent
+
+A cookie consent banner appears until the user chooses **Accept** or **Decline**. If they accept, GA4 is loaded and the choice is stored in `localStorage` so the banner does not show again. The banner links to the Privacy Policy for details.
+
+### Company profile download
+
+Place your company profile PDF as `public/downloads/company-profile.pdf`. The Contact and Leadership pages show a "Download company profile" link. You can override the path in `.env` with `COMPANY_PROFILE_URL=downloads/company-profile.pdf`.
+
+### Blog
+
+The site includes a minimal blog at `/blog/` (e.g. `public/blog/index.php`). Two placeholder posts are defined in `public/blog/post.php`. You can add more posts in the same file or later connect a CMS.
+
+**Reporting:** Monthly SEO reports, PageSpeed screenshots, and crawlability reports are operational deliverables and are not part of the codebase; they are produced using GA4, GSC, and other tools after deployment.
+
 ## Production Deployment
 
 ### Deploying to Render

@@ -47,6 +47,16 @@
           setTheme(current === "dark" ? "light" : "dark");
         });
       });
+
+      // GA4 contact events (phone/email clicks)
+      document.querySelectorAll(".ga-contact").forEach(function (el) {
+        el.addEventListener("click", function () {
+          if (typeof gtag === "function") {
+            var method = el.getAttribute("data-ga-method") || "contact";
+            gtag("event", "contact", { method: method });
+          }
+        });
+      });
     });
   })();
 </script>

@@ -1,6 +1,6 @@
-# Bin Naeem Industries Website – Comprehensive Status Update
+# Bin Naaem Industries Website – Comprehensive Status Update
 
-**Date:** [Insert date]  
+**Date:** February 2025  
 **Purpose:** Summary of what is done vs what is pending, aligned with the developer scope document.
 
 ---
@@ -8,72 +8,58 @@
 ## What Is Done (Completed)
 
 ### Technical foundation
-- **Sitemap and robots:** `sitemap.xml` and `robots.txt` are in place and reference all main and brand pages.
-- **Structured data:** Organization schema (JSON-LD) is implemented site-wide (name, address, contact, social links).
-- **Caching and compression:** Sample `.htaccess` for cPanel includes compression and browser caching rules (applied when deployed as per deployment guide).
+- **Sitemap and robots:** `sitemap.xml` and `robots.txt` are in place and reference all main, brand, and blog pages.
+- **Structured data:** Organization schema and **Local Business** schema (JSON-LD) are implemented site-wide.
+- **GA4:** Google Analytics 4 is integrated; loading is gated by cookie consent (script loads only after user accepts).
+- **Google Search Console:** Verification meta tag is supported; set `GSC_VERIFICATION` in `.env` when you have the value.
+- **Caching and compression:** Sample `.htaccess` for cPanel includes compression and browser caching rules.
 - **Mobile responsiveness:** Site is built with a responsive, mobile-first layout (Tailwind CSS).
 - **Lazy loading:** Images use `loading="lazy"` where appropriate.
 
+### Compliance and conversion
+- **Cookie consent:** A cookie consent banner (Accept / Decline) is implemented; it remembers the choice and controls GA4 loading.
+- **WhatsApp UTMs:** All WhatsApp links (floating CTA, footer, contact page) include UTM parameters for tracking in GA4.
+- **Conversion tracking:** GA4 events are implemented: form submit (contact), generate_lead (thank-you page), and contact (phone/email clicks) on Contact page and footer.
+
 ### Mandatory pages (structure and content)
-- **Capabilities:** Live page covering manufacturing capabilities, material expertise, industrial production, and related strengths.
-- **Industries We Serve:** Live page with FMCG, Food & Beverage, Construction, E-commerce Packaging, and Retail; structured layout with clear sections.
-- **Leadership / Management:** Live page with company vision, mission, core values, and leadership overview.
-- **Certifications & Quality Assurance:** Live page with certification cards, quality standards, safety-related content, and “Request Compliance Pack” CTA.
+- **Capabilities:** Live page covering manufacturing, material expertise, industrial production, and related strengths.
+- **Industries We Serve:** Live page with **FMCG, Food & Beverage, Construction, Skincare & Cosmetics, Retail & Gifting**, plus E-commerce Packaging and Retail & Gifting in the consumer section.
+- **Leadership / Management:** Live page with vision, mission, core values, leadership overview, and “Download company profile” CTA.
+- **Certifications & Quality Assurance:** Live page with certification cards, quality standards, safety content, and “Request Compliance Pack” CTA.
 - **Brands Overview:** Master “Brands” page linking to all six subsidiaries.
 - **Six brand landing pages:** Naeem Packages, Box Pack, Mondsub, NS Builders, House of Piñatas, Hanplas – each with hero, summary, services/products, and inquiry CTA.
 - **Projects:** Dedicated projects/case studies page with project cards, NDA note, and FAQ.
-- **Contact:** Contact page with full contact info, “How it works” steps, and inquiry form (Industry, Project Type, Timeline, Budget, Message).
+- **Contact:** Contact page with full contact info, “How it works” steps, inquiry form, “Download company profile” link, and WhatsApp/Email CTAs with UTMs.
 
-### Conversion and trust
-- **Inquiry forms:** Main contact form and brand-level inquiry sections; submissions are sent by email via cPanel SMTP (PHPMailer).
-- **CTAs:** “Book a Consultation” and other CTAs are placed across the site (header, contact, brands, projects, certifications).
-- **Floating WhatsApp CTA:** Implemented site-wide (homepage and brand pages).
-- **Legal pages:** Privacy Policy and Terms & Conditions are published and linked in the footer.
+### Company profile and blog
+- **Company profile download:** “Download company profile” link is on Contact and Leadership pages; it points to `downloads/company-profile.pdf`. Place the client’s PDF in `public/downloads/` or set `COMPANY_PROFILE_URL` in `.env`.
+- **Blog structure:** Blog index at `blog/index.php` and single post template at `blog/post.php` with two placeholder posts. Blog is linked in header and footer; blog URLs are in the sitemap.
 
-### SEO and content
-- **Meta titles and descriptions:** Unique titles and meta descriptions are set on all main and brand pages.
-- **Internal linking:** Key pages (Capabilities, Industries, Projects, Certifications, Contact) are linked from the homepage and from relevant inner pages.
-- **Canonical URLs:** Canonical tags are set per page.
-- **Single H1 and heading hierarchy:** Pages use a single H1 and a clear H2/H3 structure.
-
-### UX and design
-- **Light and dark mode:** Implemented site-wide with a header toggle; default is light; preference is saved.
-- **Design consistency:** Shared layout, header, footer, and styling across all pages.
-- **Documentation:** README, QUICKSTART, and cPanel deployment guide (CPANEL_DEPLOYMENT.md) are available.
+### SEO, content, and UX
+- **Meta titles and descriptions:** Unique titles and meta descriptions on all main and brand pages.
+- **Internal linking:** Key pages are linked from the homepage and relevant inner pages.
+- **Canonical URLs:** Set per page.
+- **Single H1 and heading hierarchy:** Clear structure on all pages.
+- **Light and dark mode:** Site-wide with header toggle; default is light; preference saved.
+- **Documentation:** README, QUICKSTART, cPanel deployment guide (CPANEL_DEPLOYMENT.md), and status/plan docs in `docs/`.
 
 ---
 
-## What Is Pending (To Be Implemented)
+## What Is Pending (Client or Optional)
 
-Implementation is planned in phases and depends on a few items from you (see “Message to Client – Items We Need From You”).
+### From client
+- **Google Search Console verification:** Add your GSC verification string to `.env` as `GSC_VERIFICATION` when you have it.
+- **Company profile PDF:** Place the final company profile PDF at `public/downloads/company-profile.pdf` (or set `COMPANY_PROFILE_URL` in `.env`). The link is already on the site.
+- **Real testimonials:** Homepage testimonials are placeholders. When you send real quotes, names, and permissions, replace the content in the testimonials section of `public/index.php`.
 
-### Phase 1 – Analytics, verification, and schema (blocked on client inputs)
-- **GA4 integration:** Not yet implemented. Requires your GA4 Measurement ID (`G-XXXXXXXXXX`). Will be added to the site header and gated by cookie consent once implemented.
-- **Google Search Console verification:** Not yet added. Requires the verification meta tag or string from your GSC property.
-- **Local Business schema:** Not yet added. Will be implemented in addition to the existing Organization schema for better local search visibility.
-
-### Phase 2 – Compliance
-- **Cookie consent:** A cookie consent banner (accept/decline and link to Privacy Policy) is not yet implemented. It will be added and will control whether GA4 is loaded until the user accepts.
-
-### Phase 3 – Conversion tracking and WhatsApp tracking
-- **WhatsApp UTM parameters:** All WhatsApp links will be updated with UTM parameters (e.g. `utm_source=website`, `utm_medium=whatsapp`) so clicks can be measured in GA4 once GA4 is live.
-- **Conversion tracking (GA4 events):** Form submit, thank-you page, and phone/email click events will be implemented after GA4 and cookie consent are in place.
-
-### Phase 4 – Content and assets
-- **Industries – Skincare & Cosmetics:** A dedicated section for “Skincare & Cosmetics” will be added to the Industries page to match the full list in the scope (FMCG, F&B, Skincare & Cosmetics, E-commerce Packaging, Retail & Gifting, Construction).
-- **Industries – Retail & Gifting:** Wording will be aligned with “Retail & Gifting” where applicable.
-- **Company profile download:** A “Download company profile” CTA will be added (Contact page and optionally Leadership/footer). We need your final company profile PDF to host, or we can use a placeholder and you replace it later.
-- **Blog / content structure:** A minimal blog section (e.g. `/blog` index and a single post template) will be set up as per scope; no CMS or database required for the first version.
-
-### Phase 5 – Optional (can be done later)
-- **SEO-friendly (pretty) URLs:** Optional. The site currently uses `.php` URLs (e.g. `capabilities.php`). We can add rewrite rules so that URLs like `/capabilities` and `/contact` work and update all internal links accordingly.
-- **Brand-specific WhatsApp numbers:** Optional. If you provide a WhatsApp number per brand, we can route the floating CTA and contact links by brand; otherwise the single number with UTMs will remain.
-- **Real testimonials:** Homepage testimonials are placeholders. When you send real quotes, names, and permissions, we will replace the placeholder content.
+### Optional (can be done later)
+- **SEO-friendly (pretty) URLs:** The site uses `.php` URLs. Optional: add rewrite rules so that e.g. `/capabilities` and `/contact` work and update internal links.
+- **Brand-specific WhatsApp numbers:** If you provide a WhatsApp number per brand, the floating CTA and contact links can be routed per brand; otherwise the single number with UTMs remains.
 
 ### Reporting and monitoring (outside the codebase)
-- **Monthly SEO report (GA4, keywords, indexed pages):** To be done as an operational deliverable once GA4 and GSC are connected; not part of the code.
-- **Technical reporting (PageSpeed, mobile usability, schema, crawlability):** To be done via tools (e.g. Lighthouse, GSC) and shared separately; not automated in the repository.
-- **Keyword list and keyword mapping sheet:** Document deliverable; we can add a placeholder file in the repo and you or your SEO team can fill it.
+- **Monthly SEO report (GA4, keywords, indexed pages):** Operational deliverable once GA4 and GSC are connected.
+- **Technical reporting (PageSpeed, mobile usability, schema, crawlability):** Via tools (e.g. Lighthouse, GSC) and shared separately.
+- **Keyword list and keyword mapping sheet:** Document deliverable; a placeholder can be added in `docs/` for the client or SEO team to fill.
 
 ---
 
@@ -83,26 +69,25 @@ Implementation is planned in phases and depends on a few items from you (see “
 |-------------------------|----------|--------|
 | Sitemap / robots        | Done     | In place |
 | Organization schema     | Done     | In place |
-| Local Business schema   | Pending  | After Phase 1 |
-| GA4                     | Pending  | Need Measurement ID |
-| GSC verification        | Pending  | Need verification tag |
-| Cookie consent          | Pending  | Phase 2 |
-| WhatsApp UTMs           | Pending  | Phase 3 |
-| Conversion events       | Pending  | After GA4 + consent |
+| Local Business schema   | Done     | In place |
+| GA4                     | Done     | Consent-gated |
+| GSC verification        | Optional | Set in .env when available |
+| Cookie consent          | Done     | Accept/Decline, controls GA4 |
+| WhatsApp UTMs           | Done     | All links |
+| Conversion events       | Done     | Form, thank-you, phone/email |
 | All mandatory pages     | Done     | Capabilities, Industries, Leadership, Certifications, 6 brands, Projects, Contact |
-| Industries – Skincare   | Pending  | Phase 4 |
-| Company profile PDF     | Pending  | Need file from you |
-| Blog structure          | Pending  | Phase 4 |
+| Industries – Skincare   | Done     | Section added |
+| Industries – Retail & Gifting | Done | Aligned |
+| Company profile CTA     | Done     | Link on Contact & Leadership; add PDF to downloads/ |
+| Blog structure          | Done     | Index + post template + 2 placeholders |
 | Pretty URLs             | Optional | Phase 5 |
-| Real testimonials       | Pending  | When you provide content |
+| Real testimonials       | Pending  | When client provides content |
 | Legal pages             | Done     | Privacy, Terms |
 
 ---
 
 ## Next Steps
 
-1. **You:** Send the items listed in “Message to Client – Items We Need From You” (GA4 ID, GSC verification, company profile PDF, and any optional items you have).
-2. **Us:** Implement Phases 1–4 in order (and Phase 5 if agreed), then confirm when each phase is live.
-3. **Ongoing:** Reporting (monthly SEO, PageSpeed, etc.) can start once GA4 and GSC are connected and will be shared separately from the codebase.
-
-If you want to adjust priorities (e.g. blog later, or pretty URLs first), we can adapt the order accordingly.
+1. **Client:** (Optional) Send GSC verification string and company profile PDF; replace testimonial placeholders when ready.
+2. **Developer:** (Optional) Implement pretty URLs and/or brand-specific WhatsApp if requested.
+3. **Ongoing:** Monthly SEO and technical reporting can start once GA4 and GSC are in use and can be shared separately from the codebase.

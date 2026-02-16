@@ -3,6 +3,11 @@ if (!isset($title)) $title = 'Bin Naaem Industries';
 ?>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<?php
+if (!empty($gscVerification)) {
+  echo '<meta name="google-site-verification" content="' . htmlspecialchars($gscVerification, ENT_QUOTES, 'UTF-8') . '" />' . "\n";
+}
+?>
 <?php include __DIR__ . DIRECTORY_SEPARATOR . 'seo.php'; ?>
 <script>
   // Theme (default: light). Adds/removes the `dark` class on <html>.
@@ -32,12 +37,20 @@ if (!isset($title)) $title = 'Bin Naaem Industries';
       extend: {
         colors: {
           primary: "#FFFFFF",
-          "background-light": "#F3F4F6",
-          "background-dark": "#121212",
-          "surface-light": "#FFFFFF",
-          "surface-dark": "#1E1E1E",
-          "border-light": "#E5E7EB",
-          "border-dark": "#333333",
+          /* Tinted canvas theme (CSS vars: --bg etc. are space-separated RGB) */
+          canvas: "rgb(var(--bg))",
+          surface: "rgb(var(--surface))",
+          surface2: "rgb(var(--surface2))",
+          content: "rgb(var(--text))",
+          muted: "rgb(var(--muted))",
+          edge: "rgb(var(--border))",
+          /* Legacy aliases */
+          "background-light": "rgb(var(--bg))",
+          "background-dark": "rgb(var(--bg))",
+          "surface-light": "rgb(var(--surface))",
+          "surface-dark": "rgb(var(--surface))",
+          "border-light": "rgb(var(--border))",
+          "border-dark": "rgb(var(--border))",
         },
         fontFamily: {
           display: ["Playfair Display", "serif"],
@@ -57,6 +70,25 @@ if (!isset($title)) $title = 'Bin Naaem Industries';
   };
 </script>
 <style>
+  /* Theme tokens: tinted canvas + softer surfaces (fixes light-mode “white sheet” feel). */
+  :root {
+    --bg: 245 247 250;
+    --surface: 255 255 255;
+    --surface2: 248 250 252;
+    --text: 11 18 32;
+    --muted: 86 96 110;
+    --border: 226 232 240;
+    --shadow-card: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  html.dark {
+    --bg: 8 12 18;
+    --surface: 14 19 28;
+    --surface2: 17 24 39;
+    --text: 236 242 255;
+    --muted: 160 174 192;
+    --border: 38 48 64;
+    --shadow-card: 0 4px 12px rgba(0,0,0,0.3);
+  }
   .no-scrollbar::-webkit-scrollbar { display: none; }
   .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
   @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
@@ -64,6 +96,10 @@ if (!isset($title)) $title = 'Bin Naaem Industries';
   .delay-100 { animation-delay: 100ms; }
   .delay-200 { animation-delay: 200ms; }
   .delay-300 { animation-delay: 300ms; }
+  /* Hero: light scrim in light mode so hero stays bright; stronger scrim in dark mode for text. */
+  .hero-scrim { background: linear-gradient(to top, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.02) 50%, transparent 100%); }
+  html.dark .hero-scrim { background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.1) 40%, transparent 100%); }
+  .shadow-card { box-shadow: var(--shadow-card); }
 
   /* Design tokens: glass surfaces (consistent across light/dark). */
   :root{
@@ -105,12 +141,21 @@ if (!isset($title)) $title = 'Bin Naaem Industries';
 $gaId = isset($ga4MeasurementId) && $ga4MeasurementId !== '' ? $ga4MeasurementId : '';
 if ($gaId !== ''):
 ?>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo htmlspecialchars($gaId, ENT_QUOTES, 'UTF-8'); ?>"></script>
 <script>
+  window.GA4_ID = <?php echo json_encode($gaId, JSON_UNESCAPED_SLASHES); ?>;
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', '<?php echo htmlspecialchars($gaId, ENT_QUOTES, 'UTF-8'); ?>');
+  (function(){
+    var consent = typeof localStorage !== 'undefined' ? localStorage.getItem('cookie_consent') : null;
+    if (consent === 'accept' && window.GA4_ID) {
+      var s = document.createElement('script'); s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.GA4_ID;
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', window.GA4_ID);
+    } else {
+      gtag = function(){};
+    }
+  })();
 </script>
 <?php endif; ?>

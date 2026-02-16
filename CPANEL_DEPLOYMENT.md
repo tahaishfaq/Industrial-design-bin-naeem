@@ -231,6 +231,9 @@ Replace placeholder values in `.env`:
 - `SMTP_PORT`: `587` (or `465` for SSL)
 - `SMTP_USERNAME`: Full email address
 - `SMTP_PASSWORD`: Email account password from cPanel
+- `GA4_MEASUREMENT_ID`: (Optional) Google Analytics 4 Measurement ID (e.g. `G-XXXXXXXXXX`)
+- `GSC_VERIFICATION`: (Optional) Google Search Console verification meta tag content
+- `COMPANY_PROFILE_URL`: (Optional) Path to company profile PDF, e.g. `downloads/company-profile.pdf`
 
 ---
 

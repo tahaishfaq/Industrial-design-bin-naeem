@@ -11,6 +11,7 @@ $showWhatsApp = true;
 $brandName = 'Mondsub';
 $brandTagline = 'Chemicals';
 $brandDescription = 'Pioneering industrial chemical synthesis and raw material processing for next-generation manufacturing.';
+$brandLogo = '../assets/logos/mondsub.svg';
 
 require INCLUDES_PATH . '/page-start.php';
 include INCLUDES_PATH . '/brand-placeholder.php';

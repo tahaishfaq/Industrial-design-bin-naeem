@@ -45,6 +45,22 @@ $smtpToEmail = $_ENV['SMTP_TO_EMAIL'] ?? getenv('SMTP_TO_EMAIL') ?? 'info@binnae
 // Google Analytics 4 (optional: set in .env as GA4_MEASUREMENT_ID to override)
 $ga4MeasurementId = $_ENV['GA4_MEASUREMENT_ID'] ?? getenv('GA4_MEASUREMENT_ID') ?? 'G-5D3XWNL69Q';
 
+// Google Search Console verification (optional: set in .env as GSC_VERIFICATION)
+$gscVerification = $_ENV['GSC_VERIFICATION'] ?? getenv('GSC_VERIFICATION') ?? '';
+
+// Company profile PDF path (relative to site root). Replace file in public/downloads/ with real PDF.
+$companyProfileUrl = $_ENV['COMPANY_PROFILE_URL'] ?? getenv('COMPANY_PROFILE_URL') ?? 'downloads/company-profile.pdf';
+
+// WhatsApp default number (no spaces). Override per-page with $whatsappNumber.
+$waDefaultNumber = '923215707070';
+
+function waUrl($utmContent = 'cta', $number = null) {
+  global $waDefaultNumber;
+  $num = $number !== null ? preg_replace('/\D/', '', $number) : preg_replace('/\D/', '', $waDefaultNumber);
+  $params = ['utm_source' => 'website', 'utm_medium' => 'whatsapp', 'utm_campaign' => 'cta', 'utm_content' => $utmContent];
+  return 'https://wa.me/' . $num . '?' . http_build_query($params);
+}
+
 function url($path) {
     global $baseUrl;
     $path = ltrim($path, '/');

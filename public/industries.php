@@ -9,14 +9,15 @@ $currentPage = 'industries';
 require INCLUDES_PATH . '/page-start.php';
 ?>
 
-<header class="relative pt-40 pb-20 px-6 md:px-12 max-w-[1600px] mx-auto">
-  <div class="flex flex-col md:flex-row items-end justify-between gap-12">
-    <div class="md:w-2/3">
-      <span class="inline-block py-1 px-3 border border-gray-300 dark:border-gray-700 rounded-full text-xs font-semibold uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-6">Sectors &amp; Capabilities</span>
-      <h1 class="font-display text-5xl md:text-7xl lg:text-8xl leading-[1.1] text-gray-900 dark:text-white">Industries <br/><span class="italic font-light opacity-60">We Serve</span></h1>
-    </div>
-    <div class="md:w-1/3 pb-2">
-      <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">Engineering precision across diverse ecosystems. From FMCG to heavy construction, we tailor infrastructure to specific industrial needs.</p>
+<header class="relative w-full h-screen min-h-[800px] overflow-hidden">
+  <div class="absolute inset-0 z-0">
+    <img alt="Industries we serve" class="w-full h-full object-cover brightness-[0.95] dark:brightness-[0.4]" src="assets/images/hero-bin.jpg" loading="eager" width="1600" height="900" />
+    <div class="absolute inset-0 pointer-events-none hero-scrim"></div>
+  </div>
+  <div class="relative z-10 flex flex-col justify-end h-full px-6 md:px-12 pb-20 max-w-[1600px] mx-auto">
+    <div class="mb-12 md:mb-24">
+      <h1 class="font-display text-5xl md:text-7xl lg:text-8xl leading-[1.1] text-content max-w-5xl">Industries <span class="italic font-light opacity-80">We Serve</span></h1>
+      <p class="mt-8 max-w-2xl text-xl text-muted font-light leading-relaxed">Engineering precision across diverse ecosystems. From FMCG to heavy construction, we tailor infrastructure to specific industrial needs.</p>
     </div>
   </div>
 </header>
@@ -66,17 +67,47 @@ require INCLUDES_PATH . '/page-start.php';
           </div>
         </div>
       </div>
+      <div class="md:col-span-6 group relative rounded-2xl overflow-hidden cursor-pointer">
+        <img alt="Skincare and cosmetics manufacturing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFV3i34lWRoH5e1v-t3Erke-0CSCw-29gWy_ASETj7P57atcA28U2wbH7h4j6CgBAXD1aRrhzZ8utR_nThZFvG0FMR_x60PzPyXTw9zB99Kt0ywqEIdQsB4p1wtavqBEi8p0E0R8eEXikBTeuhyl3QocJn1vLzFPEytKuX6W6qMixU6Jwpu3wc59e9XjYi8-LDoAF5CnUAd6nCM-L8MseRisn8lHNHFvDJjbzpqAy11PokHY8AYkYns10TWo85vsDXHcoO_ZyuH0o" loading="lazy" width="600" height="500" />
+        <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors duration-300"></div>
+        <div class="absolute inset-0 p-8 flex flex-col justify-between">
+          <div class="flex justify-between items-start">
+            <span class="px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-xs font-bold uppercase tracking-wider text-white">04</span>
+            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center transform scale-0 group-hover:scale-100 transition-transform duration-300 origin-top-right"><span class="material-symbols-outlined text-black">arrow_outward</span></div>
+          </div>
+          <div>
+            <h3 class="font-display text-4xl text-white mb-2">Skincare &amp; Cosmetics</h3>
+            <p class="text-gray-200 text-sm max-w-md opacity-80 mb-6">Clean-room compliant packaging and filling solutions for personal care and beauty. From formulation to shelf-ready product.</p>
+            <a href="capabilities.php" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white border-b border-white/30 pb-1 hover:border-white transition-colors">View Industry</a>
+          </div>
+        </div>
+      </div>
+      <div class="md:col-span-6 group relative rounded-2xl overflow-hidden cursor-pointer">
+        <img alt="Retail and gifting" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFV3i34lWRoH5e1v-t3Erke-0CSCw-29gWy_ASETj7P57atcA28U2wbH7h4j6CgBAXD1aRrhzZ8utR_nThZFvG0FMR_x60PzPyXTw9zB99Kt0ywqEIdQsB4p1wtavqBEi8p0E0R8eEXikBTeuhyl3QocJn1vLzFPEytKuX6W6qMixU6Jwpu3wc59e9XjYi8-LDoAF5CnUAd6nCM-L8MseRisn8lHNHFvDJjbzpqAy11PokHY8AYkYns10TWo85vsDXHcoO_ZyuH0o" loading="lazy" width="600" height="500" />
+        <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors duration-300"></div>
+        <div class="absolute inset-0 p-8 flex flex-col justify-between">
+          <div class="flex justify-between items-start">
+            <span class="px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-xs font-bold uppercase tracking-wider text-white">05</span>
+            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center transform scale-0 group-hover:scale-100 transition-transform duration-300 origin-top-right"><span class="material-symbols-outlined text-black">arrow_outward</span></div>
+          </div>
+          <div>
+            <h3 class="font-display text-4xl text-white mb-2">Retail &amp; Gifting</h3>
+            <p class="text-gray-200 text-sm max-w-md opacity-80 mb-6">Immersive retail environments and premium gifting solutions. Modular layouts, display systems, and packaging that elevates the unboxing experience.</p>
+            <a href="capabilities.php" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white border-b border-white/30 pb-1 hover:border-white transition-colors">View Industry</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="py-24 px-6 md:px-12 bg-surface-light dark:bg-surface-dark rounded-t-[3rem] mt-12 border-t border-gray-200 dark:border-gray-800">
+<section class="py-24 px-6 md:px-12 bg-surface rounded-t-[3rem] mt-12 border-t border-edge">
   <div class="max-w-[1600px] mx-auto">
     <div class="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-24">
       <div class="md:col-span-4">
-        <span class="text-sm font-medium text-gray-500 dark:text-gray-400 block mb-4">(Consumer Solutions)</span>
-        <h2 class="font-display text-4xl text-gray-900 dark:text-white leading-tight mb-8">Elevating the <span class="italic font-light text-gray-500">consumer experience</span> through smart design.</h2>
-        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-8">Beyond heavy industry, Bin Naaem specializes in the nuanced requirements of consumer-facing sectors. We merge aesthetics with logistical precision.</p>
+        <span class="text-sm font-medium text-muted block mb-4">(Consumer Solutions)</span>
+        <h2 class="font-display text-4xl text-content leading-tight mb-8">Elevating the <span class="italic font-light text-muted">consumer experience</span> through smart design.</h2>
+        <p class="text-muted text-sm leading-relaxed mb-8">Beyond heavy industry, Bin Naaem specializes in the nuanced requirements of consumer-facing sectors. We merge aesthetics with logistical precision.</p>
       </div>
       <div class="md:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8">
         <div class="group">
@@ -84,24 +115,24 @@ require INCLUDES_PATH . '/page-start.php';
             <img alt="E-commerce Warehouse" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgcGo5xGO3N07RKZ_N1K5-Xaupso9oPY61bZ_LZaqwhX0cCE-xTzAOr8okqMJnGnwbxeWO--piZfKy7OvvsR5G_v888hsC2lkpfTKXsgZdVY7j519mI33-3t2f-ZcnoQJsF3Xxwgcj_4k64js9cOCUWOC7IKi1kA-Y3OH3oAck-5iX1qcq3IeswyZpERYfY0Bng7JF7LXmLceh3rCGocnapZ50bzcVu39XIB1sqtZXn7XSDx1y1edA_nXxT-t67gjS7O-PWf8f5o8" loading="lazy" width="600" height="256" />
             <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
           </div>
-          <h3 class="text-xl font-display text-gray-900 dark:text-white mb-3 group-hover:underline decoration-1 underline-offset-4">E-commerce Packaging</h3>
-          <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-4">Innovative packaging solutions designed for the rigors of modern logistics. Sustainable, durable, and brand-centric designs that enhance unboxing experiences while optimizing shipping efficiency.</p>
-          <a class="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-gray-900 dark:text-white" href="brands/naeem-packages.php">Learn More <span class="material-symbols-outlined text-sm">east</span></a>
+          <h3 class="text-xl font-display text-content mb-3 group-hover:underline decoration-1 underline-offset-4">E-commerce Packaging</h3>
+          <p class="text-muted text-sm leading-relaxed mb-4">Innovative packaging solutions designed for the rigors of modern logistics. Sustainable, durable, and brand-centric designs that enhance unboxing experiences while optimizing shipping efficiency.</p>
+          <a class="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-content" href="brands/naeem-packages.php">Learn More <span class="material-symbols-outlined text-sm">east</span></a>
         </div>
         <div class="group">
           <div class="h-64 rounded-xl overflow-hidden mb-6 relative">
             <img alt="Retail Interior" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFV3i34lWRoH5e1v-t3Erke-0CSCw-29gWy_ASETj7P57atcA28U2wbH7h4j6CgBAXD1aRrhzZ8utR_nThZFvG0FMR_x60PzPyXTw9zB99Kt0ywqEIdQsB4p1wtavqBEi8p0E0R8eEXikBTeuhyl3QocJn1vLzFPEytKuX6W6qMixU6Jwpu3wc59e9XjYi8-LDoAF5CnUAd6nCM-L8MseRisn8lHNHFvDJjbzpqAy11PokHY8AYkYns10TWo85vsDXHcoO_ZyuH0o" loading="lazy" width="600" height="256" />
             <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
           </div>
-          <h3 class="text-xl font-display text-gray-900 dark:text-white mb-3 group-hover:underline decoration-1 underline-offset-4">Retail Spaces</h3>
-          <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-4">Creating immersive physical environments. Our retail infrastructure division focuses on modular layouts, lighting integration, and customer flow optimization for high-end retail brands.</p>
-          <a class="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-gray-900 dark:text-white" href="capabilities.php">Learn More <span class="material-symbols-outlined text-sm">east</span></a>
+          <h3 class="text-xl font-display text-content mb-3 group-hover:underline decoration-1 underline-offset-4">Retail &amp; Gifting</h3>
+          <p class="text-muted text-sm leading-relaxed mb-4">Creating immersive physical environments and premium gifting solutions. Our retail division focuses on modular layouts, display systems, and customer flow optimization for high-end retail and corporate gifting.</p>
+          <a class="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-content" href="capabilities.php">Learn More <span class="material-symbols-outlined text-sm">east</span></a>
         </div>
       </div>
     </div>
   </div>
   <div class="mt-20 text-center">
-    <p class="text-gray-600 dark:text-gray-400 mb-6">View our <a href="projects.php" class="text-gray-900 dark:text-white underline hover:no-underline">completed projects</a> or <a href="contact.php" class="text-gray-900 dark:text-white underline hover:no-underline">get in touch</a> to discuss your industry needs.</p>
+    <p class="text-muted mb-6">View our <a href="projects.php" class="text-content underline hover:no-underline">completed projects</a> or <a href="contact.php" class="text-content underline hover:no-underline">get in touch</a> to discuss your industry needs.</p>
   </div>
 </section>
 

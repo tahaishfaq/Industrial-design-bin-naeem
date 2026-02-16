@@ -13,21 +13,18 @@ require INCLUDES_PATH . '/page-start.php';
 <header class="relative w-full h-screen min-h-[800px] overflow-hidden">
   <div class="absolute inset-0 z-0">
     <img
-      alt="Modern corporate industrial architecture with glass facade reflecting sky"
-      class="w-full h-full object-cover brightness-[0.65] dark:brightness-[0.4]"
-      src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgcGo5xGO3N07RKZ_N1K5-Xaupso9oPY61bZ_LZaqwhX0cCE-xTzAOr8okqMJnGnwbxeWO--piZfKy7OvvsR5G_v888hsC2lkpfTKXsgZdVY7j519mI33-3t2f-ZcnoQJsF3Xxwgcj_4k64js9cOCUWOC7IKi1kA-Y3OH3oAck-5iX1qcq3IeswyZpERYfY0Bng7JF7LXmLceh3rCGocnapZ50bzcVu39XIB1sqtZXn7XSDx1y1edA_nXxT-t67gjS7O-PWf8f5o8"
+      alt="Modern industrial architecture, Bin Naaem"
+      class="w-full h-full object-cover brightness-[0.95] dark:brightness-[0.4]"
+      src="assets/images/hero-bin.jpg"
       loading="eager"
       width="1600"
       height="900"
     />
-    <!-- Scrim: blend into page background without a heavy white wash -->
-    <div class="absolute inset-0 pointer-events-none">
-      <div class="absolute bottom-0 left-0 right-0 h-[38%] bg-gradient-to-b from-transparent to-background-light dark:to-background-dark"></div>
-    </div>
+    <div class="absolute inset-0 pointer-events-none hero-scrim"></div>
   </div>
   <div class="relative z-10 flex flex-col justify-end h-full px-6 md:px-12 pb-20 max-w-[1600px] mx-auto">
     <div class="mb-12 md:mb-24">
-      <h1 class="font-display text-5xl md:text-7xl lg:text-8xl leading-[1.1] text-gray-900 dark:text-white max-w-5xl">
+      <h1 class="font-display text-5xl md:text-7xl lg:text-8xl leading-[1.1] text-content max-w-5xl">
         Engineering <br />
         <span class="italic font-light opacity-80">tomorrow's</span>
         industrial <br />
@@ -36,10 +33,10 @@ require INCLUDES_PATH . '/page-start.php';
     </div>
     <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-end">
       <div class="col-span-1 md:col-span-5 flex flex-wrap gap-3">
-        <span class="px-6 py-2 rounded-full glass-soft text-sm text-gray-900 dark:text-gray-200">Infrastructure</span>
-        <span class="px-6 py-2 rounded-full glass-soft text-sm text-gray-900 dark:text-gray-200">Energy</span>
-        <span class="px-6 py-2 rounded-full glass-soft text-sm text-gray-900 dark:text-gray-200">Logistics</span>
-        <span class="px-6 py-2 rounded-full glass-soft text-sm text-gray-900 dark:text-gray-200">Manufacturing</span>
+        <span class="px-6 py-2 rounded-full glass-soft text-sm text-content">Infrastructure</span>
+        <span class="px-6 py-2 rounded-full glass-soft text-sm text-content">Energy</span>
+        <span class="px-6 py-2 rounded-full glass-soft text-sm text-content">Logistics</span>
+        <span class="px-6 py-2 rounded-full glass-soft text-sm text-content">Manufacturing</span>
       </div>
       <div class="col-span-1 md:col-span-7 flex justify-end gap-4 overflow-x-auto no-scrollbar">
         <div class="relative w-64 h-40 rounded-xl overflow-hidden group cursor-pointer border border-white/10 flex-shrink-0">
@@ -61,34 +58,33 @@ require INCLUDES_PATH . '/page-start.php';
   </div>
 </header>
 
-<section class="py-24 px-6 md:px-12 bg-background-light dark:bg-background-dark">
+<section class="py-24 px-6 md:px-12 bg-canvas">
   <div class="max-w-[1600px] mx-auto">
     <div class="flex flex-col md:flex-row gap-12 md:gap-24">
       <div class="md:w-1/4">
-        <span class="text-sm font-medium text-gray-500 dark:text-gray-400 block mb-2">(01)</span>
-        <h3 class="text-lg font-semibold uppercase tracking-wider text-gray-900 dark:text-white">About Us</h3>
+        <h3 class="text-lg font-semibold uppercase tracking-wider text-content">About Us</h3>
       </div>
       <div class="md:w-3/4">
-        <h2 class="font-display text-4xl md:text-5xl lg:text-6xl leading-tight text-gray-900 dark:text-gray-100 mb-12">
+        <h2 class="font-display text-4xl md:text-5xl lg:text-6xl leading-tight text-content mb-12">
           <span class="font-bold">Bin Naaem Industries</span> is driven by a
           deep passion for capturing
-          <span class="italic font-light text-gray-500 dark:text-gray-400">industrial potential</span>
+          <span class="italic font-light text-muted">industrial potential</span>
           and engineering life's most essential infrastructures with
           precision and a touch of
-          <span class="italic font-light text-gray-500 dark:text-gray-400">innovation</span>.
+          <span class="italic font-light text-muted">innovation</span>.
         </h2>
         <div class="flex flex-col sm:flex-row gap-8 items-start sm:items-center">
-          <p class="text-gray-600 dark:text-gray-400 max-w-md text-sm leading-relaxed">
+          <p class="text-muted max-w-md text-sm leading-relaxed">
             We ardently strive to encapsulate engineering excellence,
             weaving a tapestry of technical artistry and sustainable growth.
             With the timeless essence of industrial progress.
           </p>
           <div class="flex flex-wrap gap-4">
-            <a class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-gray-300 dark:border-gray-600 hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-all text-xs font-bold tracking-widest uppercase" href="capabilities.php">Capabilities</a>
-            <a class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-gray-300 dark:border-gray-600 hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-all text-xs font-bold tracking-widest uppercase" href="industries.php">Industries</a>
-            <a class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-gray-300 dark:border-gray-600 hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-all text-xs font-bold tracking-widest uppercase" href="projects.php">Projects</a>
-            <a class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-gray-300 dark:border-gray-600 hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-all text-xs font-bold tracking-widest uppercase" href="certifications.php">Certifications</a>
-            <a class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-gray-300 dark:border-gray-600 hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-all text-xs font-bold tracking-widest uppercase" href="contact.php">Contact</a>
+            <a class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-edge hover:bg-content hover:text-surface transition-all text-xs font-bold tracking-widest uppercase" href="capabilities.php">Capabilities</a>
+            <a class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-edge hover:bg-content hover:text-surface transition-all text-xs font-bold tracking-widest uppercase" href="industries.php">Industries</a>
+            <a class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-edge hover:bg-content hover:text-surface transition-all text-xs font-bold tracking-widest uppercase" href="projects.php">Projects</a>
+            <a class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-edge hover:bg-content hover:text-surface transition-all text-xs font-bold tracking-widest uppercase" href="certifications.php">Certifications</a>
+            <a class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-edge hover:bg-content hover:text-surface transition-all text-xs font-bold tracking-widest uppercase" href="contact.php">Contact</a>
           </div>
         </div>
       </div>
@@ -96,23 +92,22 @@ require INCLUDES_PATH . '/page-start.php';
   </div>
 </section>
 
-<section class="py-24 px-6 md:px-12 bg-surface-light dark:bg-surface-dark rounded-3xl mx-2 md:mx-6 overflow-hidden">
+<section class="py-24 px-6 md:px-12 bg-surface rounded-3xl mx-2 md:mx-6 overflow-hidden border border-edge shadow-card">
   <div class="max-w-[1600px] mx-auto">
     <div class="flex justify-between items-start mb-16">
       <div>
-        <span class="text-sm font-medium text-gray-500 dark:text-gray-400 block mb-2">(02)</span>
-        <h3 class="text-lg font-semibold uppercase tracking-wider text-gray-900 dark:text-white mb-6">Our Expertise</h3>
-        <h2 class="font-display text-4xl md:text-5xl text-gray-900 dark:text-white max-w-2xl leading-tight">
+        <h3 class="text-lg font-semibold uppercase tracking-wider text-content mb-6">Our Expertise</h3>
+        <h2 class="font-display text-4xl md:text-5xl text-content max-w-2xl leading-tight">
           When vision is engineered, <br />
           every blueprint is crafted into <br />
-          <span class="italic font-light text-gray-500 dark:text-gray-400">tangible reality.</span>
+          <span class="italic font-light text-muted">tangible reality.</span>
         </h2>
       </div>
       <div class="hidden md:flex flex-col gap-4 text-right">
-        <a class="text-2xl font-display text-gray-900 dark:text-white hover:italic transition-all" href="capabilities.php">Infrastructure</a>
-        <a class="text-2xl font-display text-gray-400 hover:text-gray-900 dark:hover:text-white hover:italic transition-all" href="capabilities.php">Energy</a>
-        <a class="text-2xl font-display text-gray-400 hover:text-gray-900 dark:hover:text-white hover:italic transition-all" href="capabilities.php">Logistics</a>
-        <a class="text-2xl font-display text-gray-400 hover:text-gray-900 dark:hover:text-white hover:italic transition-all" href="capabilities.php">Technology</a>
+        <a class="text-2xl font-display text-content hover:italic transition-all" href="capabilities.php">Infrastructure</a>
+        <a class="text-2xl font-display text-muted hover:text-content hover:italic transition-all" href="capabilities.php">Energy</a>
+        <a class="text-2xl font-display text-muted hover:text-content hover:italic transition-all" href="capabilities.php">Logistics</a>
+        <a class="text-2xl font-display text-muted hover:text-content hover:italic transition-all" href="capabilities.php">Technology</a>
       </div>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-[500px]">
@@ -132,27 +127,26 @@ require INCLUDES_PATH . '/page-start.php';
       </div>
     </div>
     <div class="flex items-center gap-4 mt-8">
-      <button type="button" class="w-10 h-10 rounded-full border border-gray-300 dark:border-gray-600 flex items-center justify-center hover:bg-gray-100 dark:hover:bg-white/10 transition-colors" aria-label="Previous"><span class="material-icons-outlined text-sm dark:text-white">west</span></button>
+      <button type="button" class="w-10 h-10 rounded-full border border-edge flex items-center justify-center hover:bg-surface2 transition-colors" aria-label="Previous"><span class="material-icons-outlined text-sm text-content">west</span></button>
       <button type="button" class="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center hover:bg-gray-200 transition-colors" aria-label="Next"><span class="material-icons-outlined text-sm">east</span></button>
-      <div class="h-[1px] bg-gray-300 dark:bg-gray-700 flex-grow ml-4"></div>
-      <a class="text-xs font-bold uppercase tracking-widest text-gray-900 dark:text-white" href="projects.php">See all projects</a>
+      <div class="h-[1px] bg-edge flex-grow ml-4"></div>
+      <a class="text-xs font-bold uppercase tracking-widest text-content" href="projects.php">See all projects</a>
     </div>
   </div>
 </section>
 
-<section class="py-24 px-6 md:px-12 bg-background-light dark:bg-background-dark">
+<section class="py-24 px-6 md:px-12 bg-canvas">
   <div class="max-w-[1600px] mx-auto">
     <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
       <div class="max-w-2xl">
-        <span class="text-sm font-medium text-gray-500 dark:text-gray-400 block mb-2">(03)</span>
-        <h3 class="text-lg font-semibold uppercase tracking-wider text-gray-900 dark:text-white mb-4">Our Work</h3>
-        <h2 class="font-display text-4xl md:text-5xl text-gray-900 dark:text-white leading-tight">
+        <h3 class="text-lg font-semibold uppercase tracking-wider text-content mb-4">Our Work</h3>
+        <h2 class="font-display text-4xl md:text-5xl text-content leading-tight">
           Explore the <span class="italic font-light">artistry</span> and
           precision behind our <span class="font-bold">portfolio</span> of
           timeless subsidiaries.
         </h2>
       </div>
-      <a class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-gray-300 dark:border-gray-600 hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-all text-xs font-bold tracking-widest uppercase whitespace-nowrap" href="brands.php">
+      <a class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-edge hover:bg-content hover:text-surface transition-all text-xs font-bold tracking-widest uppercase whitespace-nowrap" href="brands.php">
         Explore More
         <span class="material-icons-outlined text-sm">north_east</span>
       </a>
@@ -198,15 +192,14 @@ require INCLUDES_PATH . '/page-start.php';
   </div>
 </section>
 
-<section class="py-24 px-6 md:px-12 bg-background-light dark:bg-background-dark">
+<section class="py-24 px-6 md:px-12 bg-canvas">
   <div class="max-w-[1600px] mx-auto">
     <div class="flex flex-col md:flex-row gap-12 mb-16">
       <div class="md:w-1/3">
-        <span class="text-sm font-medium text-gray-500 dark:text-gray-400 block mb-2">(04)</span>
-        <h3 class="text-lg font-semibold uppercase tracking-wider text-gray-900 dark:text-white">Awards</h3>
+        <h3 class="text-lg font-semibold uppercase tracking-wider text-content">Awards</h3>
       </div>
       <div class="md:w-2/3">
-        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl text-gray-900 dark:text-white leading-tight">
+        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl text-content leading-tight">
           Awards reflect our ongoing
           <span class="font-bold">dedication</span> to innovation and
           excellence. Available on request, certifications and technical documentation.
@@ -215,26 +208,26 @@ require INCLUDES_PATH . '/page-start.php';
     </div>
     <div class="flex flex-col md:flex-row gap-8">
       <div class="w-full md:w-2/3">
-        <div class="border-t border-gray-300 dark:border-gray-800">
-          <div class="group flex items-center justify-between py-8 border-b border-gray-300 dark:border-gray-800 cursor-pointer hover:bg-gray-100 dark:hover:bg-white/5 transition-colors px-4">
-            <span class="text-sm font-mono text-gray-500 dark:text-gray-400 w-24">2023</span>
-            <span class="flex-grow font-display text-xl text-gray-900 dark:text-white">Global Safety Excellence Award</span>
-            <div class="w-10 h-10 rounded-full border border-gray-300 dark:border-gray-700 flex items-center justify-center bg-white dark:bg-black group-hover:bg-black group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-black transition-all"><span class="material-icons-outlined text-sm transform group-hover:-rotate-45 transition-transform">arrow_forward</span></div>
+        <div class="border-t border-edge">
+          <div class="group flex items-center justify-between py-8 border-b border-edge cursor-pointer hover:bg-surface2 transition-colors px-4">
+            <span class="text-sm font-mono text-muted w-24">2023</span>
+            <span class="flex-grow font-display text-xl text-content">Global Safety Excellence Award</span>
+            <div class="w-10 h-10 rounded-full border border-edge flex items-center justify-center bg-surface group-hover:bg-content group-hover:text-surface transition-all"><span class="material-icons-outlined text-sm transform group-hover:-rotate-45 transition-transform">arrow_forward</span></div>
           </div>
-          <div class="group flex items-center justify-between py-8 border-b border-gray-300 dark:border-gray-800 cursor-pointer hover:bg-gray-100 dark:hover:bg-white/5 transition-colors px-4">
-            <span class="text-sm font-mono text-gray-500 dark:text-gray-400 w-24">2022</span>
-            <span class="flex-grow font-display text-xl text-gray-900 dark:text-white">Innovation in Industrial Engineering</span>
-            <div class="w-10 h-10 rounded-full border border-gray-300 dark:border-gray-700 flex items-center justify-center bg-white dark:bg-black group-hover:bg-black group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-black transition-all"><span class="material-icons-outlined text-sm">arrow_forward</span></div>
+          <div class="group flex items-center justify-between py-8 border-b border-edge cursor-pointer hover:bg-surface2 transition-colors px-4">
+            <span class="text-sm font-mono text-muted w-24">2022</span>
+            <span class="flex-grow font-display text-xl text-content">Innovation in Industrial Engineering</span>
+            <div class="w-10 h-10 rounded-full border border-edge flex items-center justify-center bg-surface group-hover:bg-content group-hover:text-surface transition-all"><span class="material-icons-outlined text-sm">arrow_forward</span></div>
           </div>
-          <div class="group flex items-center justify-between py-8 border-b border-gray-300 dark:border-gray-800 cursor-pointer hover:bg-gray-100 dark:hover:bg-white/5 transition-colors px-4">
-            <span class="text-sm font-mono text-gray-500 dark:text-gray-400 w-24">2021</span>
-            <span class="flex-grow font-display text-xl text-gray-900 dark:text-white">Sustainable Manufacturing Practice</span>
-            <div class="w-10 h-10 rounded-full border border-gray-300 dark:border-gray-700 flex items-center justify-center bg-white dark:bg-black group-hover:bg-black group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-black transition-all"><span class="material-icons-outlined text-sm">arrow_forward</span></div>
+          <div class="group flex items-center justify-between py-8 border-b border-edge cursor-pointer hover:bg-surface2 transition-colors px-4">
+            <span class="text-sm font-mono text-muted w-24">2021</span>
+            <span class="flex-grow font-display text-xl text-content">Sustainable Manufacturing Practice</span>
+            <div class="w-10 h-10 rounded-full border border-edge flex items-center justify-center bg-surface group-hover:bg-content group-hover:text-surface transition-all"><span class="material-icons-outlined text-sm">arrow_forward</span></div>
           </div>
-          <div class="group flex items-center justify-between py-8 border-b border-gray-300 dark:border-gray-800 cursor-pointer hover:bg-gray-100 dark:hover:bg-white/5 transition-colors px-4">
-            <span class="text-sm font-mono text-gray-500 dark:text-gray-400 w-24">2020</span>
-            <span class="flex-grow font-display text-xl text-gray-900 dark:text-white">Regional Logistics Leader</span>
-            <div class="w-10 h-10 rounded-full border border-gray-300 dark:border-gray-700 flex items-center justify-center bg-white dark:bg-black group-hover:bg-black group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-black transition-all"><span class="material-icons-outlined text-sm">arrow_forward</span></div>
+          <div class="group flex items-center justify-between py-8 border-b border-edge cursor-pointer hover:bg-surface2 transition-colors px-4">
+            <span class="text-sm font-mono text-muted w-24">2020</span>
+            <span class="flex-grow font-display text-xl text-content">Regional Logistics Leader</span>
+            <div class="w-10 h-10 rounded-full border border-edge flex items-center justify-center bg-surface group-hover:bg-content group-hover:text-surface transition-all"><span class="material-icons-outlined text-sm">arrow_forward</span></div>
           </div>
         </div>
       </div>
@@ -251,17 +244,16 @@ require INCLUDES_PATH . '/page-start.php';
   </div>
 </section>
 
-<section class="py-24 px-6 md:px-12 bg-surface-light dark:bg-surface-dark rounded-3xl mx-2 md:mx-6">
+<section class="py-24 px-6 md:px-12 bg-surface rounded-3xl mx-2 md:mx-6">
   <div class="max-w-[1600px] mx-auto">
     <div class="flex flex-col md:flex-row gap-12 mb-16">
       <div class="md:w-1/4">
-        <span class="text-sm font-medium text-gray-500 dark:text-gray-400 block mb-2">(05)</span>
-        <h3 class="text-lg font-semibold uppercase tracking-wider text-gray-900 dark:text-white">Testimonials</h3>
+        <h3 class="text-lg font-semibold uppercase tracking-wider text-content">Testimonials</h3>
       </div>
       <div class="md:w-3/4">
-        <h2 class="font-display text-4xl md:text-5xl lg:text-6xl leading-tight text-gray-900 dark:text-white">
+        <h2 class="font-display text-4xl md:text-5xl lg:text-6xl leading-tight text-content">
           Trusted by leaders who value
-          <span class="italic font-light text-gray-500 dark:text-gray-400">precision</span> and
+          <span class="italic font-light text-muted">precision</span> and
           <span class="font-bold">excellence</span>.
         </h2>
       </div>
@@ -271,7 +263,7 @@ require INCLUDES_PATH . '/page-start.php';
       <div class="overflow-hidden">
         <div class="flex gap-6 md:gap-8 overflow-x-auto snap-x snap-mandatory no-scrollbar" data-carousel-track>
           <!-- Slide 1 -->
-          <article class="snap-center shrink-0 w-full md:w-2/3 lg:w-1/2 xl:w-1/3 mx-auto group border border-gray-200 dark:border-gray-800 rounded-2xl p-8 bg-background-light/60 dark:bg-background-dark/60 hover:bg-white dark:hover:bg-white/5 transition-all duration-500">
+          <article class="snap-center shrink-0 w-full md:w-2/3 lg:w-1/2 xl:w-1/3 mx-auto group border border-edge rounded-2xl p-8 bg-canvas/60 hover:bg-surface transition-all duration-500">
             <div class="flex items-center gap-1 mb-6 text-yellow-400">
               <span class="material-icons-outlined text-xl">star</span>
               <span class="material-icons-outlined text-xl">star</span>
@@ -279,22 +271,22 @@ require INCLUDES_PATH . '/page-start.php';
               <span class="material-icons-outlined text-xl">star</span>
               <span class="material-icons-outlined text-xl">star</span>
             </div>
-            <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-6 font-light">
+            <p class="text-muted text-lg leading-relaxed mb-6 font-light">
               "Bin Naaem Industries transformed our infrastructure project with exceptional attention to detail and innovative solutions. Their engineering expertise is unmatched."
             </p>
-            <div class="flex items-center gap-4 pt-6 border-t border-gray-200 dark:border-gray-800">
+            <div class="flex items-center gap-4 pt-6 border-t border-edge">
               <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gray-300 to-gray-400 dark:from-gray-600 dark:to-gray-700 flex items-center justify-center">
                 <span class="text-white font-bold text-lg">AM</span>
               </div>
               <div>
-                <p class="font-semibold text-gray-900 dark:text-white">Ahmed Malik</p>
-                <p class="text-sm text-gray-500 dark:text-gray-400">CEO, Global Infrastructure Group</p>
+                <p class="font-semibold text-content">Ahmed Malik</p>
+                <p class="text-sm text-muted">CEO, Global Infrastructure Group</p>
               </div>
             </div>
           </article>
 
           <!-- Slide 2 -->
-          <article class="snap-center shrink-0 w-full md:w-2/3 lg:w-1/2 xl:w-1/3 mx-auto group border border-gray-200 dark:border-gray-800 rounded-2xl p-8 bg-background-light/60 dark:bg-background-dark/60 hover:bg-white dark:hover:bg-white/5 transition-all duration-500">
+          <article class="snap-center shrink-0 w-full md:w-2/3 lg:w-1/2 xl:w-1/3 mx-auto group border border-edge rounded-2xl p-8 bg-canvas/60 hover:bg-surface transition-all duration-500">
             <div class="flex items-center gap-1 mb-6 text-yellow-400">
               <span class="material-icons-outlined text-xl">star</span>
               <span class="material-icons-outlined text-xl">star</span>
@@ -302,22 +294,22 @@ require INCLUDES_PATH . '/page-start.php';
               <span class="material-icons-outlined text-xl">star</span>
               <span class="material-icons-outlined text-xl">star</span>
             </div>
-            <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-6 font-light">
+            <p class="text-muted text-lg leading-relaxed mb-6 font-light">
               "Working with Bin Naaem has been a game-changer. Their commitment to sustainable practices and cutting-edge technology sets them apart in the industry."
             </p>
-            <div class="flex items-center gap-4 pt-6 border-t border-gray-200 dark:border-gray-800">
+            <div class="flex items-center gap-4 pt-6 border-t border-edge">
               <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gray-300 to-gray-400 dark:from-gray-600 dark:to-gray-700 flex items-center justify-center">
                 <span class="text-white font-bold text-lg">SK</span>
               </div>
               <div>
-                <p class="font-semibold text-gray-900 dark:text-white">Sarah Khan</p>
-                <p class="text-sm text-gray-500 dark:text-gray-400">Director, Energy Solutions Ltd</p>
+                <p class="font-semibold text-content">Sarah Khan</p>
+                <p class="text-sm text-muted">Director, Energy Solutions Ltd</p>
               </div>
             </div>
           </article>
 
           <!-- Slide 3 -->
-          <article class="snap-center shrink-0 w-full md:w-2/3 lg:w-1/2 xl:w-1/3 mx-auto group border border-gray-200 dark:border-gray-800 rounded-2xl p-8 bg-background-light/60 dark:bg-background-dark/60 hover:bg-white dark:hover:bg-white/5 transition-all duration-500">
+          <article class="snap-center shrink-0 w-full md:w-2/3 lg:w-1/2 xl:w-1/3 mx-auto group border border-edge rounded-2xl p-8 bg-canvas/60 hover:bg-surface transition-all duration-500">
             <div class="flex items-center gap-1 mb-6 text-yellow-400">
               <span class="material-icons-outlined text-xl">star</span>
               <span class="material-icons-outlined text-xl">star</span>
@@ -325,22 +317,22 @@ require INCLUDES_PATH . '/page-start.php';
               <span class="material-icons-outlined text-xl">star</span>
               <span class="material-icons-outlined text-xl">star</span>
             </div>
-            <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-6 font-light">
+            <p class="text-muted text-lg leading-relaxed mb-6 font-light">
               "The precision and reliability of Bin Naaem's manufacturing capabilities have exceeded our expectations. They are true partners in innovation."
             </p>
-            <div class="flex items-center gap-4 pt-6 border-t border-gray-200 dark:border-gray-800">
+            <div class="flex items-center gap-4 pt-6 border-t border-edge">
               <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gray-300 to-gray-400 dark:from-gray-600 dark:to-gray-700 flex items-center justify-center">
                 <span class="text-white font-bold text-lg">MR</span>
               </div>
               <div>
-                <p class="font-semibold text-gray-900 dark:text-white">Mohammed Raza</p>
-                <p class="text-sm text-gray-500 dark:text-gray-400">VP Operations, Tech Manufacturing Co</p>
+                <p class="font-semibold text-content">Mohammed Raza</p>
+                <p class="text-sm text-muted">VP Operations, Tech Manufacturing Co</p>
               </div>
             </div>
           </article>
 
           <!-- Slide 4 -->
-          <article class="snap-center shrink-0 w-full md:w-2/3 lg:w-1/2 xl:w-1/3 mx-auto group border border-gray-200 dark:border-gray-800 rounded-2xl p-8 bg-background-light/60 dark:bg-background-dark/60 hover:bg-white dark:hover:bg-white/5 transition-all duration-500">
+          <article class="snap-center shrink-0 w-full md:w-2/3 lg:w-1/2 xl:w-1/3 mx-auto group border border-edge rounded-2xl p-8 bg-canvas/60 hover:bg-surface transition-all duration-500">
             <div class="flex items-center gap-1 mb-6 text-yellow-400">
               <span class="material-icons-outlined text-xl">star</span>
               <span class="material-icons-outlined text-xl">star</span>
@@ -348,22 +340,22 @@ require INCLUDES_PATH . '/page-start.php';
               <span class="material-icons-outlined text-xl">star</span>
               <span class="material-icons-outlined text-xl">star</span>
             </div>
-            <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-6 font-light">
+            <p class="text-muted text-lg leading-relaxed mb-6 font-light">
               "Bin Naaem's logistics solutions have streamlined our supply chain operations significantly. Their global network and efficiency are remarkable."
             </p>
-            <div class="flex items-center gap-4 pt-6 border-t border-gray-200 dark:border-gray-800">
+            <div class="flex items-center gap-4 pt-6 border-t border-edge">
               <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gray-300 to-gray-400 dark:from-gray-600 dark:to-gray-700 flex items-center justify-center">
                 <span class="text-white font-bold text-lg">FA</span>
               </div>
               <div>
-                <p class="font-semibold text-gray-900 dark:text-white">Fatima Ali</p>
-                <p class="text-sm text-gray-500 dark:text-gray-400">Supply Chain Director, International Trade Corp</p>
+                <p class="font-semibold text-content">Fatima Ali</p>
+                <p class="text-sm text-muted">Supply Chain Director, International Trade Corp</p>
               </div>
             </div>
           </article>
 
           <!-- Slide 5 -->
-          <article class="snap-center shrink-0 w-full md:w-2/3 lg:w-1/2 xl:w-1/3 mx-auto group border border-gray-200 dark:border-gray-800 rounded-2xl p-8 bg-background-light/60 dark:bg-background-dark/60 hover:bg-white dark:hover:bg-white/5 transition-all duration-500">
+          <article class="snap-center shrink-0 w-full md:w-2/3 lg:w-1/2 xl:w-1/3 mx-auto group border border-edge rounded-2xl p-8 bg-canvas/60 hover:bg-surface transition-all duration-500">
             <div class="flex items-center gap-1 mb-6 text-yellow-400">
               <span class="material-icons-outlined text-xl">star</span>
               <span class="material-icons-outlined text-xl">star</span>
@@ -371,22 +363,22 @@ require INCLUDES_PATH . '/page-start.php';
               <span class="material-icons-outlined text-xl">star</span>
               <span class="material-icons-outlined text-xl">star</span>
             </div>
-            <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-6 font-light">
+            <p class="text-muted text-lg leading-relaxed mb-6 font-light">
               "Their energy division delivered a solar project ahead of schedule. The quality of work and professional approach exceeded all our benchmarks."
             </p>
-            <div class="flex items-center gap-4 pt-6 border-t border-gray-200 dark:border-gray-800">
+            <div class="flex items-center gap-4 pt-6 border-t border-edge">
               <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gray-300 to-gray-400 dark:from-gray-600 dark:to-gray-700 flex items-center justify-center">
                 <span class="text-white font-bold text-lg">HK</span>
               </div>
               <div>
-                <p class="font-semibold text-gray-900 dark:text-white">Hassan Khan</p>
-                <p class="text-sm text-gray-500 dark:text-gray-400">Project Manager, Renewable Energy Partners</p>
+                <p class="font-semibold text-content">Hassan Khan</p>
+                <p class="text-sm text-muted">Project Manager, Renewable Energy Partners</p>
               </div>
             </div>
           </article>
 
           <!-- Slide 6 -->
-          <article class="snap-center shrink-0 w-full md:w-2/3 lg:w-1/2 xl:w-1/3 mx-auto group border border-gray-200 dark:border-gray-800 rounded-2xl p-8 bg-background-light/60 dark:bg-background-dark/60 hover:bg-white dark:hover:bg-white/5 transition-all duration-500">
+          <article class="snap-center shrink-0 w-full md:w-2/3 lg:w-1/2 xl:w-1/3 mx-auto group border border-edge rounded-2xl p-8 bg-canvas/60 hover:bg-surface transition-all duration-500">
             <div class="flex items-center gap-1 mb-6 text-yellow-400">
               <span class="material-icons-outlined text-xl">star</span>
               <span class="material-icons-outlined text-xl">star</span>
@@ -394,22 +386,22 @@ require INCLUDES_PATH . '/page-start.php';
               <span class="material-icons-outlined text-xl">star</span>
               <span class="material-icons-outlined text-xl">star</span>
             </div>
-            <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-6 font-light">
+            <p class="text-muted text-lg leading-relaxed mb-6 font-light">
               "The packaging solutions from Bin Naaem have revolutionized our product distribution. Durable, sustainable, and cost-effective."
             </p>
-            <div class="flex items-center gap-4 pt-6 border-t border-gray-200 dark:border-gray-800">
+            <div class="flex items-center gap-4 pt-6 border-t border-edge">
               <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gray-300 to-gray-400 dark:from-gray-600 dark:to-gray-700 flex items-center justify-center">
                 <span class="text-white font-bold text-lg">ZA</span>
               </div>
               <div>
-                <p class="font-semibold text-gray-900 dark:text-white">Zainab Ahmed</p>
-                <p class="text-sm text-gray-500 dark:text-gray-400">Operations Head, Consumer Goods International</p>
+                <p class="font-semibold text-content">Zainab Ahmed</p>
+                <p class="text-sm text-muted">Operations Head, Consumer Goods International</p>
               </div>
             </div>
           </article>
 
           <!-- Slide 7 -->
-          <article class="snap-center shrink-0 w-full md:w-2/3 lg:w-1/2 xl:w-1/3 mx-auto group border border-gray-200 dark:border-gray-800 rounded-2xl p-8 bg-background-light/60 dark:bg-background-dark/60 hover:bg-white dark:hover:bg-white/5 transition-all duration-500">
+          <article class="snap-center shrink-0 w-full md:w-2/3 lg:w-1/2 xl:w-1/3 mx-auto group border border-edge rounded-2xl p-8 bg-canvas/60 hover:bg-surface transition-all duration-500">
             <div class="flex items-center gap-1 mb-6 text-yellow-400">
               <span class="material-icons-outlined text-xl">star</span>
               <span class="material-icons-outlined text-xl">star</span>
@@ -417,22 +409,22 @@ require INCLUDES_PATH . '/page-start.php';
               <span class="material-icons-outlined text-xl">star</span>
               <span class="material-icons-outlined text-xl">star</span>
             </div>
-            <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-6 font-light">
+            <p class="text-muted text-lg leading-relaxed mb-6 font-light">
               "Working with Bin Naaem on our industrial facility expansion was seamless. Their team's expertise and attention to safety standards is exemplary."
             </p>
-            <div class="flex items-center gap-4 pt-6 border-t border-gray-200 dark:border-gray-800">
+            <div class="flex items-center gap-4 pt-6 border-t border-edge">
               <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gray-300 to-gray-400 dark:from-gray-600 dark:to-gray-700 flex items-center justify-center">
                 <span class="text-white font-bold text-lg">OS</span>
               </div>
               <div>
-                <p class="font-semibold text-gray-900 dark:text-white">Omar Sheikh</p>
-                <p class="text-sm text-gray-500 dark:text-gray-400">Facilities Director, Heavy Industries Ltd</p>
+                <p class="font-semibold text-content">Omar Sheikh</p>
+                <p class="text-sm text-muted">Facilities Director, Heavy Industries Ltd</p>
               </div>
             </div>
           </article>
 
           <!-- Slide 8 -->
-          <article class="snap-center shrink-0 w-full md:w-2/3 lg:w-1/2 xl:w-1/3 mx-auto group border border-gray-200 dark:border-gray-800 rounded-2xl p-8 bg-background-light/60 dark:bg-background-dark/60 hover:bg-white dark:hover:bg-white/5 transition-all duration-500">
+          <article class="snap-center shrink-0 w-full md:w-2/3 lg:w-1/2 xl:w-1/3 mx-auto group border border-edge rounded-2xl p-8 bg-canvas/60 hover:bg-surface transition-all duration-500">
             <div class="flex items-center gap-1 mb-6 text-yellow-400">
               <span class="material-icons-outlined text-xl">star</span>
               <span class="material-icons-outlined text-xl">star</span>
@@ -440,22 +432,22 @@ require INCLUDES_PATH . '/page-start.php';
               <span class="material-icons-outlined text-xl">star</span>
               <span class="material-icons-outlined text-xl">star</span>
             </div>
-            <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-6 font-light">
+            <p class="text-muted text-lg leading-relaxed mb-6 font-light">
               "Bin Naaem's construction division built our headquarters with incredible precision. The project was completed on time and within budget."
             </p>
-            <div class="flex items-center gap-4 pt-6 border-t border-gray-200 dark:border-gray-800">
+            <div class="flex items-center gap-4 pt-6 border-t border-edge">
               <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gray-300 to-gray-400 dark:from-gray-600 dark:to-gray-700 flex items-center justify-center">
                 <span class="text-white font-bold text-lg">NA</span>
               </div>
               <div>
-                <p class="font-semibold text-gray-900 dark:text-white">Nadia Aslam</p>
-                <p class="text-sm text-gray-500 dark:text-gray-400">CFO, Corporate Holdings Group</p>
+                <p class="font-semibold text-content">Nadia Aslam</p>
+                <p class="text-sm text-muted">CFO, Corporate Holdings Group</p>
               </div>
             </div>
           </article>
 
           <!-- Slide 9 -->
-          <article class="snap-center shrink-0 w-full md:w-2/3 lg:w-1/2 xl:w-1/3 mx-auto group border border-gray-200 dark:border-gray-800 rounded-2xl p-8 bg-background-light/60 dark:bg-background-dark/60 hover:bg-white dark:hover:bg-white/5 transition-all duration-500">
+          <article class="snap-center shrink-0 w-full md:w-2/3 lg:w-1/2 xl:w-1/3 mx-auto group border border-edge rounded-2xl p-8 bg-canvas/60 hover:bg-surface transition-all duration-500">
             <div class="flex items-center gap-1 mb-6 text-yellow-400">
               <span class="material-icons-outlined text-xl">star</span>
               <span class="material-icons-outlined text-xl">star</span>
@@ -463,22 +455,22 @@ require INCLUDES_PATH . '/page-start.php';
               <span class="material-icons-outlined text-xl">star</span>
               <span class="material-icons-outlined text-xl">star</span>
             </div>
-            <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-6 font-light">
+            <p class="text-muted text-lg leading-relaxed mb-6 font-light">
               "The automation systems implemented by Bin Naaem have increased our production efficiency by 40%. Outstanding results and excellent support."
             </p>
-            <div class="flex items-center gap-4 pt-6 border-t border-gray-200 dark:border-gray-800">
+            <div class="flex items-center gap-4 pt-6 border-t border-edge">
               <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gray-300 to-gray-400 dark:from-gray-600 dark:to-gray-700 flex items-center justify-center">
                 <span class="text-white font-bold text-lg">IR</span>
               </div>
               <div>
-                <p class="font-semibold text-gray-900 dark:text-white">Imran Raza</p>
-                <p class="text-sm text-gray-500 dark:text-gray-400">Production Manager, Advanced Manufacturing Systems</p>
+                <p class="font-semibold text-content">Imran Raza</p>
+                <p class="text-sm text-muted">Production Manager, Advanced Manufacturing Systems</p>
               </div>
             </div>
           </article>
 
           <!-- Slide 10 -->
-          <article class="snap-center shrink-0 w-full md:w-2/3 lg:w-1/2 xl:w-1/3 mx-auto group border border-gray-200 dark:border-gray-800 rounded-2xl p-8 bg-background-light/60 dark:bg-background-dark/60 hover:bg-white dark:hover:bg-white/5 transition-all duration-500">
+          <article class="snap-center shrink-0 w-full md:w-2/3 lg:w-1/2 xl:w-1/3 mx-auto group border border-edge rounded-2xl p-8 bg-canvas/60 hover:bg-surface transition-all duration-500">
             <div class="flex items-center gap-1 mb-6 text-yellow-400">
               <span class="material-icons-outlined text-xl">star</span>
               <span class="material-icons-outlined text-xl">star</span>
@@ -486,22 +478,22 @@ require INCLUDES_PATH . '/page-start.php';
               <span class="material-icons-outlined text-xl">star</span>
               <span class="material-icons-outlined text-xl">star</span>
             </div>
-            <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-6 font-light">
+            <p class="text-muted text-lg leading-relaxed mb-6 font-light">
               "Bin Naaem's commitment to sustainable manufacturing aligns perfectly with our values. They've helped us achieve our environmental goals."
             </p>
-            <div class="flex items-center gap-4 pt-6 border-t border-gray-200 dark:border-gray-800">
+            <div class="flex items-center gap-4 pt-6 border-t border-edge">
               <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gray-300 to-gray-400 dark:from-gray-600 dark:to-gray-700 flex items-center justify-center">
                 <span class="text-white font-bold text-lg">LS</span>
               </div>
               <div>
-                <p class="font-semibold text-gray-900 dark:text-white">Layla Shah</p>
-                <p class="text-sm text-gray-500 dark:text-gray-400">Sustainability Officer, Green Industries Alliance</p>
+                <p class="font-semibold text-content">Layla Shah</p>
+                <p class="text-sm text-muted">Sustainability Officer, Green Industries Alliance</p>
               </div>
             </div>
           </article>
 
           <!-- Slide 11 -->
-          <article class="snap-center shrink-0 w-full md:w-2/3 lg:w-1/2 xl:w-1/3 mx-auto group border border-gray-200 dark:border-gray-800 rounded-2xl p-8 bg-background-light/60 dark:bg-background-dark/60 hover:bg-white dark:hover:bg-white/5 transition-all duration-500">
+          <article class="snap-center shrink-0 w-full md:w-2/3 lg:w-1/2 xl:w-1/3 mx-auto group border border-edge rounded-2xl p-8 bg-canvas/60 hover:bg-surface transition-all duration-500">
             <div class="flex items-center gap-1 mb-6 text-yellow-400">
               <span class="material-icons-outlined text-xl">star</span>
               <span class="material-icons-outlined text-xl">star</span>
@@ -509,22 +501,22 @@ require INCLUDES_PATH . '/page-start.php';
               <span class="material-icons-outlined text-xl">star</span>
               <span class="material-icons-outlined text-xl">star</span>
             </div>
-            <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-6 font-light">
+            <p class="text-muted text-lg leading-relaxed mb-6 font-light">
               "Their technical expertise and problem-solving approach helped us overcome complex engineering challenges. Truly a world-class partner."
             </p>
-            <div class="flex items-center gap-4 pt-6 border-t border-gray-200 dark:border-gray-800">
+            <div class="flex items-center gap-4 pt-6 border-t border-edge">
               <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gray-300 to-gray-400 dark:from-gray-600 dark:to-gray-700 flex items-center justify-center">
                 <span class="text-white font-bold text-lg">YK</span>
               </div>
               <div>
-                <p class="font-semibold text-gray-900 dark:text-white">Yusuf Kamal</p>
-                <p class="text-sm text-gray-500 dark:text-gray-400">Chief Engineer, Mega Projects Corporation</p>
+                <p class="font-semibold text-content">Yusuf Kamal</p>
+                <p class="text-sm text-muted">Chief Engineer, Mega Projects Corporation</p>
               </div>
             </div>
           </article>
 
           <!-- Slide 12 -->
-          <article class="snap-center shrink-0 w-full md:w-2/3 lg:w-1/2 xl:w-1/3 mx-auto group border border-gray-200 dark:border-gray-800 rounded-2xl p-8 bg-background-light/60 dark:bg-background-dark/60 hover:bg-white dark:hover:bg-white/5 transition-all duration-500">
+          <article class="snap-center shrink-0 w-full md:w-2/3 lg:w-1/2 xl:w-1/3 mx-auto group border border-edge rounded-2xl p-8 bg-canvas/60 hover:bg-surface transition-all duration-500">
             <div class="flex items-center gap-1 mb-6 text-yellow-400">
               <span class="material-icons-outlined text-xl">star</span>
               <span class="material-icons-outlined text-xl">star</span>
@@ -532,22 +524,22 @@ require INCLUDES_PATH . '/page-start.php';
               <span class="material-icons-outlined text-xl">star</span>
               <span class="material-icons-outlined text-xl">star</span>
             </div>
-            <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-6 font-light">
+            <p class="text-muted text-lg leading-relaxed mb-6 font-light">
               "The quality control standards at Bin Naaem are exceptional. Every product meets the highest international specifications."
             </p>
-            <div class="flex items-center gap-4 pt-6 border-t border-gray-200 dark:border-gray-800">
+            <div class="flex items-center gap-4 pt-6 border-t border-edge">
               <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gray-300 to-gray-400 dark:from-gray-600 dark:to-gray-700 flex items-center justify-center">
                 <span class="text-white font-bold text-lg">AA</span>
               </div>
               <div>
-                <p class="font-semibold text-gray-900 dark:text-white">Ayesha Aziz</p>
-                <p class="text-sm text-gray-500 dark:text-gray-400">Quality Assurance Director, Precision Components Inc</p>
+                <p class="font-semibold text-content">Ayesha Aziz</p>
+                <p class="text-sm text-muted">Quality Assurance Director, Precision Components Inc</p>
               </div>
             </div>
           </article>
 
           <!-- Slide 13 -->
-          <article class="snap-center shrink-0 w-full md:w-2/3 lg:w-1/2 xl:w-1/3 mx-auto group border border-gray-200 dark:border-gray-800 rounded-2xl p-8 bg-background-light/60 dark:bg-background-dark/60 hover:bg-white dark:hover:bg-white/5 transition-all duration-500">
+          <article class="snap-center shrink-0 w-full md:w-2/3 lg:w-1/2 xl:w-1/3 mx-auto group border border-edge rounded-2xl p-8 bg-canvas/60 hover:bg-surface transition-all duration-500">
             <div class="flex items-center gap-1 mb-6 text-yellow-400">
               <span class="material-icons-outlined text-xl">star</span>
               <span class="material-icons-outlined text-xl">star</span>
@@ -555,16 +547,16 @@ require INCLUDES_PATH . '/page-start.php';
               <span class="material-icons-outlined text-xl">star</span>
               <span class="material-icons-outlined text-xl">star</span>
             </div>
-            <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-6 font-light">
+            <p class="text-muted text-lg leading-relaxed mb-6 font-light">
               "Bin Naaem's integrated approach to infrastructure development has been transformative. They deliver end-to-end solutions with unmatched professionalism."
             </p>
-            <div class="flex items-center gap-4 pt-6 border-t border-gray-200 dark:border-gray-800">
+            <div class="flex items-center gap-4 pt-6 border-t border-edge">
               <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gray-300 to-gray-400 dark:from-gray-600 dark:to-gray-700 flex items-center justify-center">
                 <span class="text-white font-bold text-lg">BH</span>
               </div>
               <div>
-                <p class="font-semibold text-gray-900 dark:text-white">Bilal Hassan</p>
-                <p class="text-sm text-gray-500 dark:text-gray-400">Managing Director, Urban Development Authority</p>
+                <p class="font-semibold text-content">Bilal Hassan</p>
+                <p class="text-sm text-muted">Managing Director, Urban Development Authority</p>
               </div>
             </div>
           </article>
@@ -574,19 +566,19 @@ require INCLUDES_PATH . '/page-start.php';
       <!-- Controls --> 
       <div class="mt-10 flex items-center justify-center">
         <div class="flex items-center gap-2 flex-wrap justify-center">
-          <button type="button" class="w-2 h-2 rounded-full bg-gray-900 dark:bg-white opacity-100 transition-all duration-300" data-carousel-dot aria-label="Go to testimonial 1"></button>
-          <button type="button" class="w-2 h-2 rounded-full bg-gray-400 dark:bg-gray-500 opacity-40 transition-all duration-300" data-carousel-dot aria-label="Go to testimonial 2"></button>
-          <button type="button" class="w-2 h-2 rounded-full bg-gray-400 dark:bg-gray-500 opacity-40 transition-all duration-300" data-carousel-dot aria-label="Go to testimonial 3"></button>
-          <button type="button" class="w-2 h-2 rounded-full bg-gray-400 dark:bg-gray-500 opacity-40 transition-all duration-300" data-carousel-dot aria-label="Go to testimonial 4"></button>
-          <button type="button" class="w-2 h-2 rounded-full bg-gray-400 dark:bg-gray-500 opacity-40 transition-all duration-300" data-carousel-dot aria-label="Go to testimonial 5"></button>
-          <button type="button" class="w-2 h-2 rounded-full bg-gray-400 dark:bg-gray-500 opacity-40 transition-all duration-300" data-carousel-dot aria-label="Go to testimonial 6"></button>
-          <button type="button" class="w-2 h-2 rounded-full bg-gray-400 dark:bg-gray-500 opacity-40 transition-all duration-300" data-carousel-dot aria-label="Go to testimonial 7"></button>
-          <button type="button" class="w-2 h-2 rounded-full bg-gray-400 dark:bg-gray-500 opacity-40 transition-all duration-300" data-carousel-dot aria-label="Go to testimonial 8"></button>
-          <button type="button" class="w-2 h-2 rounded-full bg-gray-400 dark:bg-gray-500 opacity-40 transition-all duration-300" data-carousel-dot aria-label="Go to testimonial 9"></button>
-          <button type="button" class="w-2 h-2 rounded-full bg-gray-400 dark:bg-gray-500 opacity-40 transition-all duration-300" data-carousel-dot aria-label="Go to testimonial 10"></button>
-          <button type="button" class="w-2 h-2 rounded-full bg-gray-400 dark:bg-gray-500 opacity-40 transition-all duration-300" data-carousel-dot aria-label="Go to testimonial 11"></button>
-          <button type="button" class="w-2 h-2 rounded-full bg-gray-400 dark:bg-gray-500 opacity-40 transition-all duration-300" data-carousel-dot aria-label="Go to testimonial 12"></button>
-          <button type="button" class="w-2 h-2 rounded-full bg-gray-400 dark:bg-gray-500 opacity-40 transition-all duration-300" data-carousel-dot aria-label="Go to testimonial 13"></button>
+          <button type="button" class="w-2 h-2 rounded-full bg-content opacity-100 transition-all duration-300" data-carousel-dot aria-label="Go to testimonial 1"></button>
+          <button type="button" class="w-2 h-2 rounded-full bg-muted opacity-40 transition-all duration-300" data-carousel-dot aria-label="Go to testimonial 2"></button>
+          <button type="button" class="w-2 h-2 rounded-full bg-muted opacity-40 transition-all duration-300" data-carousel-dot aria-label="Go to testimonial 3"></button>
+          <button type="button" class="w-2 h-2 rounded-full bg-muted opacity-40 transition-all duration-300" data-carousel-dot aria-label="Go to testimonial 4"></button>
+          <button type="button" class="w-2 h-2 rounded-full bg-muted opacity-40 transition-all duration-300" data-carousel-dot aria-label="Go to testimonial 5"></button>
+          <button type="button" class="w-2 h-2 rounded-full bg-muted opacity-40 transition-all duration-300" data-carousel-dot aria-label="Go to testimonial 6"></button>
+          <button type="button" class="w-2 h-2 rounded-full bg-muted opacity-40 transition-all duration-300" data-carousel-dot aria-label="Go to testimonial 7"></button>
+          <button type="button" class="w-2 h-2 rounded-full bg-muted opacity-40 transition-all duration-300" data-carousel-dot aria-label="Go to testimonial 8"></button>
+          <button type="button" class="w-2 h-2 rounded-full bg-muted opacity-40 transition-all duration-300" data-carousel-dot aria-label="Go to testimonial 9"></button>
+          <button type="button" class="w-2 h-2 rounded-full bg-muted opacity-40 transition-all duration-300" data-carousel-dot aria-label="Go to testimonial 10"></button>
+          <button type="button" class="w-2 h-2 rounded-full bg-muted opacity-40 transition-all duration-300" data-carousel-dot aria-label="Go to testimonial 11"></button>
+          <button type="button" class="w-2 h-2 rounded-full bg-muted opacity-40 transition-all duration-300" data-carousel-dot aria-label="Go to testimonial 12"></button>
+          <button type="button" class="w-2 h-2 rounded-full bg-muted opacity-40 transition-all duration-300" data-carousel-dot aria-label="Go to testimonial 13"></button>
         </div>
       </div>
     </div>
@@ -613,11 +605,11 @@ document.addEventListener('DOMContentLoaded', function () {
     if (dots.length) {
       dots.forEach((dot, i) => {
         if (i === index) {
-          dot.classList.remove('opacity-40', 'bg-gray-400', 'dark:bg-gray-500');
-          dot.classList.add('opacity-100', 'bg-gray-900', 'dark:bg-white');
+          dot.classList.remove('opacity-40', 'bg-muted');
+          dot.classList.add('opacity-100', 'bg-content');
         } else {
-          dot.classList.remove('opacity-100', 'bg-gray-900', 'dark:bg-white');
-          dot.classList.add('opacity-40', 'bg-gray-400', 'dark:bg-gray-500');
+          dot.classList.remove('opacity-100', 'bg-content');
+          dot.classList.add('opacity-40', 'bg-muted');
         }
       });
     }

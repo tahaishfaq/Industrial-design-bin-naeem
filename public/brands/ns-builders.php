@@ -11,6 +11,7 @@ $showWhatsApp = true;
 $brandName = 'NS Builders';
 $brandTagline = 'Infrastructure';
 $brandDescription = 'Building the skylines of tomorrow with state-of-the-art engineering practices and safety standards.';
+$brandLogo = '../assets/logos/ns-builders.svg';
 
 require INCLUDES_PATH . '/page-start.php';
 include INCLUDES_PATH . '/brand-placeholder.php';
