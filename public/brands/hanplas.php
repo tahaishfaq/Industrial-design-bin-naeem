@@ -11,7 +11,9 @@ $showWhatsApp = true;
 $brandName = 'Hanplas';
 $brandTagline = 'Polymers';
 $brandDescription = 'Innovative polymer solutions and sustainable plastics engineering for a circular economy.';
-$brandLogo = '../assets/logos/hanplas.svg';
+$brandLogo = '../assets/logos/hanplas.PNG';
+$brandSlug = 'hanplas';
+$waPrefillText = 'Hi, I want a quote for Hanplas.';
 
 require INCLUDES_PATH . '/page-start.php';
 include INCLUDES_PATH . '/brand-placeholder.php';

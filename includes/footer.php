@@ -1,6 +1,6 @@
 <?php
 $base = (isset($isBrand) && $isBrand) ? '../' : ((isset($isBlog) && $isBlog) ? '../' : '');
-$logoUrl = $base . 'assets/logos/bin-naeem.svg';
+$logoUrl = $base . 'assets/logos/bin-naeem.PNG';
 ?>
 <footer class="bg-surface py-24 px-6 md:px-12 mt-12 border-t border-edge">
   <div class="max-w-[1600px] mx-auto">
@@ -15,7 +15,7 @@ $logoUrl = $base . 'assets/logos/bin-naeem.svg';
           <a class="group flex items-center gap-3 bg-content text-surface px-8 py-4 rounded-full text-lg font-bold hover:opacity-90 transition-all border border-edge shadow-card" href="<?php echo $base; ?>contact.php">
             LET'S TALK
             <div class="w-8 h-8 bg-surface rounded-full flex items-center justify-center group-hover:opacity-90 transition-colors">
-              <span class="material-icons-outlined text-content text-sm transform -rotate-45">arrow_forward</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 text-content transform -rotate-45"></i>
             </div>
           </a>
         </span>
@@ -24,13 +24,13 @@ $logoUrl = $base . 'assets/logos/bin-naeem.svg';
     </div>
 
     <!-- Footer Bottom: 4 columns (Logo+contact, links 1, links 2, socials) --> 
-    <div class="border-t border-edge pt-12">
+    <div class="border-t border-edge pt-12 ">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-10">
 
         <!-- Column 1: Logo + address + contact --> 
         <div class="space-y-4">
-          <a href="<?php echo $base; ?>index.php" class="inline-block hover:opacity-80 transition-opacity">
-            <img src="<?php echo htmlspecialchars($logoUrl, ENT_QUOTES, 'UTF-8'); ?>" alt="Bin Naaem Industries" class="h-8 w-auto" width="140" height="36" />
+          <a href="<?php echo $base; ?>index.php" class="inline-block hover:opacity-80 transition-opacity h-14 w-[220px] flex-shrink-0 overflow-hidden">
+            <img src="<?php echo htmlspecialchars($logoUrl, ENT_QUOTES, 'UTF-8'); ?>" alt="Bin Naaem Industries" class="w-full h-full object-cover object-center" />
           </a>
           <div class="text-sm text-muted leading-relaxed">
             <p>Jalil Centre, 231-Circular Road,<br />Bhati Gate, Lahore,<br />Pakistan. 54000</p>
@@ -42,26 +42,26 @@ $logoUrl = $base . 'assets/logos/bin-naeem.svg';
           </div>
         </div>
 
-        <!-- Column 2: Nav links (set 1) --> 
+        <!-- Column 2: Main pages --> 
         <div>
           <h3 class="text-xs font-semibold uppercase tracking-[0.15em] text-muted mb-4">Navigate</h3>
           <div class="flex flex-col gap-2 text-sm">
             <a class="text-muted hover:text-content transition-colors" href="<?php echo $base; ?>index.php">Home</a>
-            <a class="text-muted hover:text-content transition-colors" href="<?php echo $base; ?>capabilities.php">Services</a>
+            <a class="text-muted hover:text-content transition-colors" href="<?php echo $base; ?>capabilities.php">Capabilities</a>
             <a class="text-muted hover:text-content transition-colors" href="<?php echo $base; ?>projects.php">Projects</a>
             <a class="text-muted hover:text-content transition-colors" href="<?php echo $base; ?>industries.php">Industries</a>
             <a class="text-muted hover:text-content transition-colors" href="<?php echo $base; ?>brands.php">Brands</a>
+            <a class="text-muted hover:text-content transition-colors" href="<?php echo $base; ?>contact.php">Contact</a>
           </div>
         </div>
 
-        <!-- Column 3: Nav links (set 2) --> 
+        <!-- Column 3: Company & legal --> 
         <div>
           <h3 class="text-xs font-semibold uppercase tracking-[0.15em] text-muted mb-4">Company</h3>
           <div class="flex flex-col gap-2 text-sm">
-            <a class="text-muted hover:text-content transition-colors" href="<?php echo $base; ?>leadership.php">About Us</a>
+            <a class="text-muted hover:text-content transition-colors" href="<?php echo $base; ?>leadership.php">Leadership</a>
             <a class="text-muted hover:text-content transition-colors" href="<?php echo $base; ?>certifications.php">Certifications</a>
             <a class="text-muted hover:text-content transition-colors" href="<?php echo $base; ?>blog/index.php">Blog</a>
-            <a class="text-muted hover:text-content transition-colors" href="<?php echo $base; ?>contact.php">Contact</a>
             <a class="text-muted hover:text-content transition-colors" href="<?php echo $base; ?>privacy-policy.php">Privacy</a>
             <a class="text-muted hover:text-content transition-colors" href="<?php echo $base; ?>terms.php">Terms</a>
           </div>

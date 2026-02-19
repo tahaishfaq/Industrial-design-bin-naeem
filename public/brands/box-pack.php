@@ -11,7 +11,9 @@ $showWhatsApp = true;
 $brandName = 'Box Pack';
 $brandTagline = 'Packaging';
 $brandDescription = 'Delivering advanced industrial packaging solutions that ensure safety and efficiency in global supply chains.';
-$brandLogo = '../assets/logos/box-pack.svg';
+$brandLogo = '../assets/logos/box-pack.PNG';
+$brandSlug = 'box-pack';
+$waPrefillText = 'Hi, I want a quote for Box Pack.';
 
 require INCLUDES_PATH . '/page-start.php';
 include INCLUDES_PATH . '/brand-placeholder.php';

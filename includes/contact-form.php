@@ -4,8 +4,13 @@
  */
 $formAction = isset($inquiryFormAction) ? $inquiryFormAction : 'send-inquiry.php';
 $formId     = isset($inquiryFormId) ? $inquiryFormId : 'contact-form';
+$presetIndustry = isset($contactPresetIndustry) ? $contactPresetIndustry : '';
+$presetBrand = isset($contactPresetBrand) ? $contactPresetBrand : '';
+$presetProject = isset($contactPresetProject) ? $contactPresetProject : '';
 ?>
 <form id="<?php echo htmlspecialchars($formId, ENT_QUOTES, 'UTF-8'); ?>" class="space-y-6" method="post" action="<?php echo $formAction ? htmlspecialchars($formAction, ENT_QUOTES, 'UTF-8') : ''; ?>" novalidate>
+  <?php if ($presetBrand !== ''): ?><input type="hidden" name="brand_name" value="<?php echo htmlspecialchars($presetBrand, ENT_QUOTES, 'UTF-8'); ?>" /><?php endif; ?>
+  <?php if ($presetProject !== ''): ?><input type="hidden" name="project_reference" value="<?php echo htmlspecialchars($presetProject, ENT_QUOTES, 'UTF-8'); ?>" /><?php endif; ?>
   <div>
     <label for="contact-name" class="block text-sm font-medium text-content mb-2">Name</label>
     <input type="text" id="contact-name" name="name" required autocomplete="name" class="w-full px-4 py-3 rounded-xl border border-edge bg-surface text-content placeholder:text-muted focus:ring-2 focus:ring-muted focus:border-transparent transition-all" placeholder="Your name" />
@@ -18,9 +23,13 @@ $formId     = isset($inquiryFormId) ? $inquiryFormId : 'contact-form';
     <label for="contact-industry" class="block text-sm font-medium text-content mb-2">Industry</label>
     <select id="contact-industry" name="industry" class="w-full px-4 py-3 rounded-xl border border-edge bg-surface text-content focus:ring-2 focus:ring-muted focus:border-transparent transition-all">
       <option value="">Select Industry</option>
-      <option value="fmcg">FMCG</option>
-      <option value="food-beverage">Food and Beverage</option>
-      <option value="construction">Construction</option>
+      <option value="fmcg"<?php if ($presetIndustry === 'fmcg') echo ' selected'; ?>>FMCG</option>
+      <option value="food-beverage"<?php if ($presetIndustry === 'food-beverage') echo ' selected'; ?>>Food and Beverage</option>
+      <option value="skincare-cosmetics"<?php if ($presetIndustry === 'skincare-cosmetics') echo ' selected'; ?>>Skincare &amp; Cosmetics</option>
+      <option value="ecommerce-packaging"<?php if ($presetIndustry === 'ecommerce-packaging') echo ' selected'; ?>>E-commerce Packaging</option>
+      <option value="retail-gifting"<?php if ($presetIndustry === 'retail-gifting') echo ' selected'; ?>>Retail &amp; Gifting</option>
+      <option value="construction-infrastructure"<?php if ($presetIndustry === 'construction-infrastructure') echo ' selected'; ?>>Construction &amp; Infrastructure</option>
+      <option value="construction"<?php if ($presetIndustry === 'construction') echo ' selected'; ?>>Construction</option>
       <option value="manufacturing">Manufacturing</option>
       <option value="logistics">Logistics</option>
       <option value="energy">Energy</option>
@@ -72,7 +81,7 @@ $formId     = isset($inquiryFormId) ? $inquiryFormId : 'contact-form';
   <div>
     <button type="submit" class="inline-flex items-center gap-2 bg-content text-surface px-8 py-4 rounded-full text-sm font-semibold hover:bg-surface2 transition-all border border-edge shadow-sm hover:shadow-md">
       Send Inquiry
-      <span class="material-icons-outlined text-sm">arrow_forward</span>
+      <i data-lucide="arrow-right" class="w-4 h-4"></i>
     </button>
   </div>
 </form>

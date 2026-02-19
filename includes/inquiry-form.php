@@ -6,8 +6,12 @@
  */
 $formAction = isset($inquiryFormAction) ? $inquiryFormAction : 'send-inquiry.php';
 $formId     = isset($inquiryFormId) ? $inquiryFormId : 'inquiry-form';
+$hiddenFields = isset($inquiryHiddenFields) && is_array($inquiryHiddenFields) ? $inquiryHiddenFields : [];
 ?>
 <form id="<?php echo htmlspecialchars($formId, ENT_QUOTES, 'UTF-8'); ?>" class="space-y-6" method="post" action="<?php echo $formAction ? htmlspecialchars($formAction, ENT_QUOTES, 'UTF-8') : ''; ?>" novalidate>
+  <?php foreach ($hiddenFields as $f): ?>
+  <input type="hidden" name="<?php echo htmlspecialchars($f['name'], ENT_QUOTES, 'UTF-8'); ?>" value="<?php echo htmlspecialchars($f['value'] ?? '', ENT_QUOTES, 'UTF-8'); ?>" />
+  <?php endforeach; ?>
   <div>
     <label for="inquiry-name" class="block text-sm font-medium text-content mb-2">Name</label>
     <input type="text" id="inquiry-name" name="name" required autocomplete="name" class="w-full px-4 py-3 rounded-xl border border-edge bg-surface text-content placeholder:text-muted focus:ring-2 focus:ring-muted focus:border-transparent transition-all" placeholder="Your name" />
@@ -27,7 +31,21 @@ $formId     = isset($inquiryFormId) ? $inquiryFormId : 'inquiry-form';
   <div>
     <button type="submit" class="inline-flex items-center gap-2 bg-content text-surface px-8 py-4 rounded-full text-sm font-semibold hover:bg-surface2 transition-all border border-edge shadow-sm hover:shadow-md">
       Send Inquiry
-      <span class="material-icons-outlined text-sm">arrow_forward</span>
+      <i data-lucide="arrow-right" class="w-4 h-4"></i>
     </button>
   </div>
 </form>
+<?php if (!empty($inquiryGa4LeadSubmit)): ?>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var form = document.getElementById("<?php echo htmlspecialchars($formId, ENT_QUOTES, 'UTF-8'); ?>");
+  if (form) form.addEventListener("submit", function() {
+    try {
+      if (typeof gtag === "function") {
+        gtag("event", "lead_submit", { brand_name: "<?php echo htmlspecialchars($inquiryGa4BrandName ?? '', ENT_QUOTES, 'UTF-8'); ?>", page_path: "<?php echo htmlspecialchars($inquiryGa4PagePath ?? '', ENT_QUOTES, 'UTF-8'); ?>", utm_campaign: "<?php echo htmlspecialchars($inquiryGa4UtmCampaign ?? '', ENT_QUOTES, 'UTF-8'); ?>" });
+      }
+    } catch (e) {}
+  });
+});
+</script>
+<?php endif; ?>

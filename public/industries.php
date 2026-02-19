@@ -1,139 +1,180 @@
 <?php
 require_once __DIR__ . '/../includes/config.php';
 
-$title = 'Industrial Sectors We Serve, Naeem Group';
-$description = 'Industrial solutions for FMCG, food and beverage, construction, manufacturing, and logistics.';
+$title = 'Industries We Serve, Naeem Group';
+$description = 'Industrial solutions for FMCG, food and beverage, construction, e-commerce packaging, retail, and more.';
 $canonical = 'https://binnaeemindustries.com/industries';
 $currentPage = 'industries';
+$showWhatsApp = true;
+$waPrefillText = 'Hi, I would like an industry-specific quote.';
+
+$compactTitle = 'Industries';
+$compactSubtitle = 'Solutions tailored to each industry\'s needs';
+$compactBreadcrumb = [['label' => 'Industries', 'url' => '']];
+$compactPrimaryCta = ['label' => 'Get an industry-specific quote', 'url' => 'contact.php?industry=fmcg'];
+
+$industries = [
+  'fmcg' => [
+    'name' => 'FMCG',
+    'pain_points' => 'High-volume production demands, supply chain speed, and cost efficiency.',
+    'deliver' => 'Manufacturing and packaging solutions, automated lines, and supply chain integration.',
+    'compliance' => 'Quality and safety standards relevant to fast-moving consumer goods.',
+    'deliverables' => 'Production lines, packaging systems, warehousing integration.',
+    'capability_anchors' => ['#manufacturing', '#machinery', '#scale'],
+    'brands' => ['naeem-packages' => 'Naeem Packages', 'box-pack' => 'Box Pack'],
+  ],
+  'food-beverage' => [
+    'name' => 'Food & Beverage',
+    'pain_points' => 'Hygiene-critical environments, traceability, and shelf-life requirements.',
+    'deliver' => 'Hygiene-compliant packaging, filling solutions, and facility-grade infrastructure.',
+    'compliance' => 'Food safety and hygiene standards; traceability where required.',
+    'deliverables' => 'Packaging lines, filling equipment, clean-room solutions.',
+    'capability_anchors' => ['#materials', '#quality', '#manufacturing'],
+    'brands' => ['hanplas' => 'Hanplas', 'naeem-packages' => 'Naeem Packages'],
+  ],
+  'skincare-cosmetics' => [
+    'name' => 'Skincare & Cosmetics',
+    'pain_points' => 'Clean-room compliance, premium aesthetics, and regulatory requirements.',
+    'deliver' => 'Clean-room compliant packaging, filling, and premium secondary packaging.',
+    'compliance' => 'Cosmetic and personal care standards; GMP where applicable.',
+    'deliverables' => 'Primary and secondary packaging, display units, gifting solutions.',
+    'capability_anchors' => ['#materials', '#quality', '#machinery'],
+    'brands' => ['box-pack' => 'Box Pack', 'hanplas' => 'Hanplas'],
+  ],
+  'ecommerce-packaging' => [
+    'name' => 'E-commerce Packaging',
+    'pain_points' => 'Durability in transit, unboxing experience, and sustainable materials.',
+    'deliver' => 'E-commerce-ready packaging, protective solutions, and branded unboxing experiences.',
+    'compliance' => 'Recyclability and sustainability requirements; carrier standards.',
+    'deliverables' => 'Shipping cartons, protective packaging, branded boxes.',
+    'capability_anchors' => ['#materials', '#manufacturing', '#scale'],
+    'brands' => ['naeem-packages' => 'Naeem Packages', 'box-pack' => 'Box Pack', 'mondsub' => 'Mondsub'],
+  ],
+  'retail-gifting' => [
+    'name' => 'Retail & Gifting',
+    'pain_points' => 'Premium presentation, display readiness, and seasonal scalability.',
+    'deliver' => 'Premium gifting and display packaging, modular retail solutions.',
+    'compliance' => 'Retail and display standards as required.',
+    'deliverables' => 'Gift boxes, display units, seasonal packaging.',
+    'capability_anchors' => ['#materials', '#manufacturing'],
+    'brands' => ['box-pack' => 'Box Pack', 'house-of-pinatas' => 'House of Piñatas'],
+  ],
+  'construction-infrastructure' => [
+    'name' => 'Construction & Infrastructure',
+    'pain_points' => 'Timelines, structural requirements, and multi-phase coordination.',
+    'deliver' => 'Infrastructure and construction project delivery, structural and MEP scope.',
+    'compliance' => 'Building codes, safety standards, and project certifications.',
+    'deliverables' => 'Civil and structural work, building systems, project management.',
+    'capability_anchors' => ['#manufacturing', '#machinery', '#scale'],
+    'brands' => ['ns-builders' => 'NS Builders'],
+  ],
+];
+
+$industrySlugs = array_keys($industries);
+$firstSlug = $industrySlugs[0];
 
 require INCLUDES_PATH . '/page-start.php';
+include INCLUDES_PATH . '/compact-page-header.php';
 ?>
 
-<header class="relative w-full h-screen min-h-[800px] overflow-hidden">
-  <div class="absolute inset-0 z-0">
-    <img alt="Industries we serve" class="w-full h-full object-cover brightness-[0.95] dark:brightness-[0.4]" src="assets/images/hero-bin.jpg" loading="eager" width="1600" height="900" />
-    <div class="absolute inset-0 pointer-events-none hero-scrim"></div>
-  </div>
-  <div class="relative z-10 flex flex-col justify-end h-full px-6 md:px-12 pb-20 max-w-[1600px] mx-auto">
-    <div class="mb-12 md:mb-24">
-      <h1 class="font-display text-5xl md:text-7xl lg:text-8xl leading-[1.1] text-content max-w-5xl">Industries <span class="italic font-light opacity-80">We Serve</span></h1>
-      <p class="mt-8 max-w-2xl text-xl text-muted font-light leading-relaxed">Engineering precision across diverse ecosystems. From FMCG to heavy construction, we tailor infrastructure to specific industrial needs.</p>
-    </div>
-  </div>
-</header>
-
-<section class="pb-24 px-6 md:px-12">
+<section class="py-24 px-6 md:px-12 bg-canvas border-t border-edge">
   <div class="max-w-[1600px] mx-auto">
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[500px]">
-      <div class="md:col-span-7 group relative rounded-2xl overflow-hidden cursor-pointer">
-        <img alt="FMCG Factory Line" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0bikdpbTnJ3JPPNA0q3fKk9Dq1kLKuoXvLzBYdGrkCcm0CRu0iKMh35v_CUD3YFx6wSIEev3Pm8ZOHHvl4YVLHRNFgGwhp9UGXpT6_4aijCjld_fKddCFyVoEABYUta4Q85wyubBj-wXbcCyvUaA-dgBXNu_OZFc6sdPmTr1TE-WNtA2Qk1MIah20aA04hB25OX-y4ZGTY4VDDgCztn2TMbVy8zFcezieHpfAAMTHgfHL0oZJrD2l6X6FekGrLtXgsMEuTZByRQU" loading="lazy" width="800" height="500" />
-        <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors duration-300"></div>
-        <div class="absolute inset-0 p-8 flex flex-col justify-between">
-          <div class="flex justify-between items-start">
-            <span class="px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-xs font-bold uppercase tracking-wider text-white">01</span>
-            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center transform scale-0 group-hover:scale-100 transition-transform duration-300 origin-top-right"><span class="material-symbols-outlined text-black">arrow_outward</span></div>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+      <aside class="lg:col-span-4">
+        <h2 class="text-sm font-semibold uppercase tracking-wider text-muted mb-6">Select industry</h2>
+        <nav class="space-y-2" aria-label="Industries">
+          <?php foreach ($industries as $slug => $ind): ?>
+          <button type="button" class="industry-tab w-full text-left px-6 py-4 rounded-2xl border border-edge text-content font-medium transition-all hover:bg-surface2 focus:outline-none focus:ring-2 focus:ring-muted <?php echo $slug === $firstSlug ? 'bg-surface2 border-muted' : 'bg-surface'; ?>" data-industry="<?php echo htmlspecialchars($slug, ENT_QUOTES, 'UTF-8'); ?>">
+            <?php echo htmlspecialchars($ind['name'], ENT_QUOTES, 'UTF-8'); ?>
+          </button>
+          <?php endforeach; ?>
+        </nav>
+      </aside>
+      <div class="lg:col-span-8">
+        <?php foreach ($industries as $slug => $ind): ?>
+        <div class="industry-detail py-6 <?php echo $slug !== $firstSlug ? 'hidden' : ''; ?>" id="detail-<?php echo htmlspecialchars($slug, ENT_QUOTES, 'UTF-8'); ?>" data-industry="<?php echo htmlspecialchars($slug, ENT_QUOTES, 'UTF-8'); ?>">
+          <h3 class="font-display text-3xl md:text-4xl text-content mb-8"><?php echo htmlspecialchars($ind['name'], ENT_QUOTES, 'UTF-8'); ?></h3>
+          <div class="space-y-8">
+            <div>
+              <h4 class="text-sm font-semibold uppercase tracking-wider text-muted mb-2">Pain points</h4>
+              <p class="text-content"><?php echo htmlspecialchars($ind['pain_points'], ENT_QUOTES, 'UTF-8'); ?></p>
+            </div>
+            <div>
+              <h4 class="text-sm font-semibold uppercase tracking-wider text-muted mb-2">What we deliver</h4>
+              <p class="text-content"><?php echo htmlspecialchars($ind['deliver'], ENT_QUOTES, 'UTF-8'); ?></p>
+            </div>
+            <div>
+              <h4 class="text-sm font-semibold uppercase tracking-wider text-muted mb-2">Compliance</h4>
+              <p class="text-content"><?php echo htmlspecialchars($ind['compliance'], ENT_QUOTES, 'UTF-8'); ?></p>
+            </div>
+            <div>
+              <h4 class="text-sm font-semibold uppercase tracking-wider text-muted mb-2">Typical deliverables</h4>
+              <p class="text-content"><?php echo htmlspecialchars($ind['deliverables'], ENT_QUOTES, 'UTF-8'); ?></p>
+            </div>
+            <div>
+              <h4 class="text-sm font-semibold uppercase tracking-wider text-muted mb-3">Relevant capabilities</h4>
+              <p class="text-muted text-sm mb-2">See <a href="capabilities.php" class="text-content underline hover:no-underline">Capabilities</a> for manufacturing, machinery, materials, quality, and scale.</p>
+              <div class="flex flex-wrap gap-2">
+                <?php foreach ($ind['capability_anchors'] as $anchor): ?>
+                <a href="capabilities.php<?php echo htmlspecialchars($anchor, ENT_QUOTES, 'UTF-8'); ?>" class="px-4 py-2 rounded-full border border-edge text-sm text-content hover:bg-surface2 transition-all"><?php echo htmlspecialchars(trim($anchor, '#'), ENT_QUOTES, 'UTF-8'); ?></a>
+                <?php endforeach; ?>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-sm font-semibold uppercase tracking-wider text-muted mb-3">Relevant brands</h4>
+              <div class="flex flex-wrap gap-2">
+                <?php foreach ($ind['brands'] as $brandSlug => $brandName): ?>
+                <a href="brands/<?php echo htmlspecialchars($brandSlug, ENT_QUOTES, 'UTF-8'); ?>.php" class="px-4 py-2 rounded-full border border-edge text-sm text-content hover:bg-surface2 transition-all"><?php echo htmlspecialchars($brandName, ENT_QUOTES, 'UTF-8'); ?></a>
+                <?php endforeach; ?>
+              </div>
+            </div>
           </div>
-          <div>
-            <h3 class="font-display text-4xl text-white mb-2">FMCG</h3>
-            <p class="text-gray-200 text-sm max-w-md opacity-80 mb-6">High-speed manufacturing solutions and automated supply chain integration for fast-moving goods.</p>
-            <a href="capabilities.php" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white border-b border-white/30 pb-1 hover:border-white transition-colors">View Industry</a>
-          </div>
-        </div>
-      </div>
-      <div class="md:col-span-5 group relative rounded-2xl overflow-hidden cursor-pointer">
-        <img alt="Food Processing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdo_fFfBNLBVSeVnMqsJYfWPqx2tQCeiHnBeVdmTGdcrsrnLuumD_uCAhhK3sPtGSXTif5u0QF9A0W2y4e6slVbEcOD5B-pomHxpm3f1kL2VKxf7SiXewulB4zhPEXo9DRXkJNFa-pGL-sJTkBziuohr1B2BRyYVngJVstjfkCX6kFcabukz6A16yrEBnn2wYvopefcU32w1QFSPoPX4hz_WmqvTbq-W2WdFU_1Wj9KPs265nf149pGsniaOLwchv6SqoDmbykrzE" loading="lazy" width="600" height="500" />
-        <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors duration-300"></div>
-        <div class="absolute inset-0 p-8 flex flex-col justify-between">
-          <div class="flex justify-between items-start">
-            <span class="px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-xs font-bold uppercase tracking-wider text-white">02</span>
-            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center transform scale-0 group-hover:scale-100 transition-transform duration-300 origin-top-right"><span class="material-symbols-outlined text-black">arrow_outward</span></div>
-          </div>
-          <div>
-            <h3 class="font-display text-4xl text-white mb-2">Food &amp; Beverage</h3>
-            <p class="text-gray-200 text-sm max-w-sm opacity-80 mb-6">Hygiene-critical infrastructure engineering ensuring safety and efficiency.</p>
-            <a href="capabilities.php" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white border-b border-white/30 pb-1 hover:border-white transition-colors">View Industry</a>
-          </div>
-        </div>
-      </div>
-      <div class="md:col-span-12 group relative rounded-2xl overflow-hidden cursor-pointer">
-        <img alt="Construction Site" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 brightness-75" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBN13H0psPt5cKfpbwGYETXbKT9-tJw6XLlFIp09Ubh50ZhcnqB9FQKQHeLa5gDWLte_fPw7mw7grCd7cvjb0L3dyTo09dph_ADEHjai54ixLRO3rDV5Hhlr2YnoSYH6ZVISTdiikmBhJxb0tW4vgePKX31QE4ULQC9DwxYtcwnid3cvl8gDZFbNCu-nYw55W5i4eKUDqSaASdZ18qKfaJamvBNrRw6ph8etNc9MgYdBwIbOKS_rhQTKtvau2F_qUv_84BlNcl8Ouo" loading="lazy" width="1200" height="500" />
-        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80"></div>
-        <div class="absolute inset-0 p-8 md:p-12 flex flex-col justify-end items-start">
-          <span class="absolute top-8 left-8 md:left-12 px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-xs font-bold uppercase tracking-wider text-white">03</span>
-          <div class="max-w-3xl">
-            <h3 class="font-display text-5xl md:text-6xl text-white mb-4">Construction</h3>
-            <p class="text-gray-300 text-lg md:text-xl max-w-2xl opacity-90 mb-8 font-light">From urban skyscrapers to industrial complexes, we provide the foundational engineering that shapes modern skylines.</p>
-            <a href="capabilities.php" class="px-8 py-4 bg-white text-black rounded-full text-sm font-bold uppercase tracking-widest hover:bg-gray-200 transition-all flex items-center gap-2 group-hover:gap-4">View Industry <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
-          </div>
-        </div>
-      </div>
-      <div class="md:col-span-6 group relative rounded-2xl overflow-hidden cursor-pointer">
-        <img alt="Skincare and cosmetics manufacturing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFV3i34lWRoH5e1v-t3Erke-0CSCw-29gWy_ASETj7P57atcA28U2wbH7h4j6CgBAXD1aRrhzZ8utR_nThZFvG0FMR_x60PzPyXTw9zB99Kt0ywqEIdQsB4p1wtavqBEi8p0E0R8eEXikBTeuhyl3QocJn1vLzFPEytKuX6W6qMixU6Jwpu3wc59e9XjYi8-LDoAF5CnUAd6nCM-L8MseRisn8lHNHFvDJjbzpqAy11PokHY8AYkYns10TWo85vsDXHcoO_ZyuH0o" loading="lazy" width="600" height="500" />
-        <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors duration-300"></div>
-        <div class="absolute inset-0 p-8 flex flex-col justify-between">
-          <div class="flex justify-between items-start">
-            <span class="px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-xs font-bold uppercase tracking-wider text-white">04</span>
-            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center transform scale-0 group-hover:scale-100 transition-transform duration-300 origin-top-right"><span class="material-symbols-outlined text-black">arrow_outward</span></div>
-          </div>
-          <div>
-            <h3 class="font-display text-4xl text-white mb-2">Skincare &amp; Cosmetics</h3>
-            <p class="text-gray-200 text-sm max-w-md opacity-80 mb-6">Clean-room compliant packaging and filling solutions for personal care and beauty. From formulation to shelf-ready product.</p>
-            <a href="capabilities.php" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white border-b border-white/30 pb-1 hover:border-white transition-colors">View Industry</a>
-          </div>
-        </div>
-      </div>
-      <div class="md:col-span-6 group relative rounded-2xl overflow-hidden cursor-pointer">
-        <img alt="Retail and gifting" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFV3i34lWRoH5e1v-t3Erke-0CSCw-29gWy_ASETj7P57atcA28U2wbH7h4j6CgBAXD1aRrhzZ8utR_nThZFvG0FMR_x60PzPyXTw9zB99Kt0ywqEIdQsB4p1wtavqBEi8p0E0R8eEXikBTeuhyl3QocJn1vLzFPEytKuX6W6qMixU6Jwpu3wc59e9XjYi8-LDoAF5CnUAd6nCM-L8MseRisn8lHNHFvDJjbzpqAy11PokHY8AYkYns10TWo85vsDXHcoO_ZyuH0o" loading="lazy" width="600" height="500" />
-        <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors duration-300"></div>
-        <div class="absolute inset-0 p-8 flex flex-col justify-between">
-          <div class="flex justify-between items-start">
-            <span class="px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-xs font-bold uppercase tracking-wider text-white">05</span>
-            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center transform scale-0 group-hover:scale-100 transition-transform duration-300 origin-top-right"><span class="material-symbols-outlined text-black">arrow_outward</span></div>
-          </div>
-          <div>
-            <h3 class="font-display text-4xl text-white mb-2">Retail &amp; Gifting</h3>
-            <p class="text-gray-200 text-sm max-w-md opacity-80 mb-6">Immersive retail environments and premium gifting solutions. Modular layouts, display systems, and packaging that elevates the unboxing experience.</p>
-            <a href="capabilities.php" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white border-b border-white/30 pb-1 hover:border-white transition-colors">View Industry</a>
+          <div class="mt-12">
+            <a href="contact.php?industry=<?php echo htmlspecialchars($slug, ENT_QUOTES, 'UTF-8'); ?>" class="industry-quote-cta inline-flex items-center gap-2 glass px-6 py-3 rounded-full text-sm font-semibold text-content hover:opacity-90 transition-all" data-industry="<?php echo htmlspecialchars($slug, ENT_QUOTES, 'UTF-8'); ?>">
+              Get an industry-specific quote
+              <span class="material-icons-outlined text-sm">arrow_forward</span>
+            </a>
           </div>
         </div>
+        <?php endforeach; ?>
       </div>
     </div>
   </div>
 </section>
 
-<section class="py-24 px-6 md:px-12 bg-surface rounded-t-[3rem] mt-12 border-t border-edge">
-  <div class="max-w-[1600px] mx-auto">
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-24">
-      <div class="md:col-span-4">
-        <span class="text-sm font-medium text-muted block mb-4">(Consumer Solutions)</span>
-        <h2 class="font-display text-4xl text-content leading-tight mb-8">Elevating the <span class="italic font-light text-muted">consumer experience</span> through smart design.</h2>
-        <p class="text-muted text-sm leading-relaxed mb-8">Beyond heavy industry, Bin Naaem specializes in the nuanced requirements of consumer-facing sectors. We merge aesthetics with logistical precision.</p>
-      </div>
-      <div class="md:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="group">
-          <div class="h-64 rounded-xl overflow-hidden mb-6 relative">
-            <img alt="E-commerce Warehouse" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgcGo5xGO3N07RKZ_N1K5-Xaupso9oPY61bZ_LZaqwhX0cCE-xTzAOr8okqMJnGnwbxeWO--piZfKy7OvvsR5G_v888hsC2lkpfTKXsgZdVY7j519mI33-3t2f-ZcnoQJsF3Xxwgcj_4k64js9cOCUWOC7IKi1kA-Y3OH3oAck-5iX1qcq3IeswyZpERYfY0Bng7JF7LXmLceh3rCGocnapZ50bzcVu39XIB1sqtZXn7XSDx1y1edA_nXxT-t67gjS7O-PWf8f5o8" loading="lazy" width="600" height="256" />
-            <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
-          </div>
-          <h3 class="text-xl font-display text-content mb-3 group-hover:underline decoration-1 underline-offset-4">E-commerce Packaging</h3>
-          <p class="text-muted text-sm leading-relaxed mb-4">Innovative packaging solutions designed for the rigors of modern logistics. Sustainable, durable, and brand-centric designs that enhance unboxing experiences while optimizing shipping efficiency.</p>
-          <a class="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-content" href="brands/naeem-packages.php">Learn More <span class="material-symbols-outlined text-sm">east</span></a>
-        </div>
-        <div class="group">
-          <div class="h-64 rounded-xl overflow-hidden mb-6 relative">
-            <img alt="Retail Interior" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFV3i34lWRoH5e1v-t3Erke-0CSCw-29gWy_ASETj7P57atcA28U2wbH7h4j6CgBAXD1aRrhzZ8utR_nThZFvG0FMR_x60PzPyXTw9zB99Kt0ywqEIdQsB4p1wtavqBEi8p0E0R8eEXikBTeuhyl3QocJn1vLzFPEytKuX6W6qMixU6Jwpu3wc59e9XjYi8-LDoAF5CnUAd6nCM-L8MseRisn8lHNHFvDJjbzpqAy11PokHY8AYkYns10TWo85vsDXHcoO_ZyuH0o" loading="lazy" width="600" height="256" />
-            <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
-          </div>
-          <h3 class="text-xl font-display text-content mb-3 group-hover:underline decoration-1 underline-offset-4">Retail &amp; Gifting</h3>
-          <p class="text-muted text-sm leading-relaxed mb-4">Creating immersive physical environments and premium gifting solutions. Our retail division focuses on modular layouts, display systems, and customer flow optimization for high-end retail and corporate gifting.</p>
-          <a class="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-content" href="capabilities.php">Learn More <span class="material-symbols-outlined text-sm">east</span></a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="mt-20 text-center">
-    <p class="text-muted mb-6">View our <a href="projects.php" class="text-content underline hover:no-underline">completed projects</a> or <a href="contact.php" class="text-content underline hover:no-underline">get in touch</a> to discuss your industry needs.</p>
-  </div>
-</section>
+<script>
+(function() {
+  var tabs = document.querySelectorAll('.industry-tab');
+  var details = document.querySelectorAll('.industry-detail');
+  tabs.forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      var slug = tab.getAttribute('data-industry');
+      tabs.forEach(function(t) {
+        t.classList.remove('bg-surface2', 'border-muted');
+        t.classList.add('bg-surface');
+        if (t.getAttribute('data-industry') === slug) {
+          t.classList.add('bg-surface2', 'border-muted');
+          t.classList.remove('bg-surface');
+        }
+      });
+      details.forEach(function(d) {
+        d.classList.add('hidden');
+        if (d.getAttribute('data-industry') === slug) d.classList.remove('hidden');
+      });
+      var cta = document.querySelector('.industry-quote-cta[data-industry="' + slug + '"]');
+      if (cta) {
+        cta.href = 'contact.php?industry=' + encodeURIComponent(slug);
+      }
+    });
+  });
+  document.querySelectorAll('.industry-quote-cta').forEach(function(a) {
+    a.addEventListener('click', function() {
+      if (typeof gtag === 'function') {
+        gtag('event', 'generate_lead', { event_category: 'industry_quote', event_label: a.getAttribute('data-industry') });
+      }
+    });
+  });
+})();
+</script>
 
 <?php require INCLUDES_PATH . '/page-end.php'; ?>

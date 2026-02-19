@@ -8,5 +8,10 @@ if (!empty($showWhatsApp)) {
   include __DIR__ . '/whatsapp-cta.php';
 }
 ?>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    if (typeof lucide !== 'undefined' && lucide.createIcons) lucide.createIcons();
+  });
+</script>
 </body>
 </html>

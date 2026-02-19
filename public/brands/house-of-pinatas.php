@@ -7,6 +7,7 @@ $canonical = 'https://binnaeemindustries.com/brands/house-of-pinatas';
 $currentPage = 'brands';
 $isBrand = true;
 $showWhatsApp = true;
+$waPrefillText = 'Hi, I want a quote for House of Piñatas.';
 
 require INCLUDES_PATH . '/page-start.php';
 ?>
@@ -24,8 +25,8 @@ require INCLUDES_PATH . '/page-start.php';
         <p class="mt-8 text-lg md:text-xl text-gray-300 max-w-2xl font-light border-l border-white/20 pl-6">Celebrating life's moments with premium, handcrafted piñatas and party supplies. Where tradition meets innovation in festive manufacturing.</p>
       </div>
       <div class="hidden md:block">
-        <div class="w-32 h-32 rounded-full border border-white/20 bg-white/5 backdrop-blur-md flex items-center justify-center p-5">
-          <img src="../assets/logos/pinatas.svg" alt="House of Piñatas" class="w-full h-full object-contain" />
+        <div class="w-32 h-32 rounded-full border border-white/20 bg-white/5 backdrop-blur-md flex items-center justify-center p-1 overflow-hidden">
+          <img src="../assets/logos/pinatas.PNG" alt="House of Piñatas" class="w-full h-full object-cover object-center" />
         </div>
       </div>
     </div>
@@ -99,13 +100,27 @@ require INCLUDES_PATH . '/page-start.php';
   </div>
 </section>
 
-<section class="py-24 px-6 md:px-12 bg-canvas relative" id="quote-form">
+<section class="py-24 px-6 md:px-12 bg-canvas relative" id="inquiry">
   <div class="max-w-[1600px] mx-auto">
     <span class="text-sm font-medium text-muted block mb-2">Inquiry</span>
     <h2 class="font-display text-4xl md:text-5xl lg:text-6xl text-content leading-[1.1] mb-8">Ready to <br/><span class="italic font-light text-gray-500">celebrate</span> with us?</h2>
     <p class="text-muted text-lg leading-relaxed max-w-md mb-12">From intimate gatherings to grand celebrations, we craft piñatas that make every moment memorable. Contact us for custom designs or bulk orders.</p>
     <div class="max-w-xl">
-      <?php $inquiryFormAction = '../send-inquiry.php'; include INCLUDES_PATH . '/inquiry-form.php'; ?>
+      <?php
+      $inquiryFormAction = '../send-inquiry.php';
+      $inquiryHiddenFields = [
+        ['name' => 'brand_name', 'value' => 'House of Piñatas'],
+        ['name' => 'page_path', 'value' => '/brands/house-of-pinatas.php'],
+        ['name' => 'utm_source', 'value' => isset($_GET['utm_source']) ? trim(strip_tags((string) $_GET['utm_source'])) : ''],
+        ['name' => 'utm_medium', 'value' => isset($_GET['utm_medium']) ? trim(strip_tags((string) $_GET['utm_medium'])) : ''],
+        ['name' => 'utm_campaign', 'value' => isset($_GET['utm_campaign']) ? trim(strip_tags((string) $_GET['utm_campaign'])) : ''],
+      ];
+      $inquiryGa4LeadSubmit = true;
+      $inquiryGa4BrandName = 'House of Piñatas';
+      $inquiryGa4PagePath = '/brands/house-of-pinatas.php';
+      $inquiryGa4UtmCampaign = isset($_GET['utm_campaign']) ? trim(strip_tags((string) $_GET['utm_campaign'])) : '';
+      include INCLUDES_PATH . '/inquiry-form.php';
+      ?>
     </div>
   </div>
 </section>

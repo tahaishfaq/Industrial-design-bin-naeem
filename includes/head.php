@@ -27,6 +27,7 @@ if (!empty($gscVerification)) {
   })();
 </script>
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
@@ -135,6 +136,27 @@ if (!empty($gscVerification)) {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     transition: background 200ms ease;
+  }
+
+  /* Mobile: consistent spacing and section rhythm */
+  @media (max-width: 767px) {
+    section {
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
+    section.py-24 {
+      padding-top: 2.5rem !important;
+      padding-bottom: 2.5rem !important;
+    }
+    section.py-16 {
+      padding-top: 2rem !important;
+      padding-bottom: 2rem !important;
+    }
+    header.relative.pt-32 {
+      padding-top: 5.5rem !important;
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
   }
 </style>
 <?php

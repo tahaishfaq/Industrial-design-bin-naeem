@@ -5,22 +5,15 @@ $title = 'Leadership and Company Overview, Naeem Group';
 $description = 'Our leadership team, mission, values, and commitment to industrial excellence and safety.';
 $canonical = 'https://binnaeemindustries.com/leadership';
 $currentPage = 'leadership';
+$showWhatsApp = true;
+
+$compactTitle = 'Leadership';
+$compactSubtitle = 'Vision, governance, and the leadership behind our brands';
+$compactBreadcrumb = [['label' => 'Leadership', 'url' => '']];
 
 require INCLUDES_PATH . '/page-start.php';
+include INCLUDES_PATH . '/compact-page-header.php';
 ?>
-
-<header class="relative w-full h-screen min-h-[800px] overflow-hidden">
-  <div class="absolute inset-0 z-0">
-    <img alt="Leadership" class="w-full h-full object-cover brightness-[0.95] dark:brightness-[0.4]" src="assets/images/hero-bin.jpg" loading="eager" width="1600" height="900" />
-    <div class="absolute inset-0 pointer-events-none hero-scrim"></div>
-  </div>
-  <div class="relative z-10 flex flex-col justify-end h-full px-6 md:px-12 pb-20 max-w-[1600px] mx-auto">
-    <div class="mb-12 md:mb-24">
-      <h1 class="font-display text-5xl md:text-7xl lg:text-8xl leading-[1.1] text-content max-w-5xl">Leadership</h1>
-      <p class="mt-8 max-w-2xl text-xl text-muted font-light leading-relaxed">Governance, vision, and the team driving industrial excellence.</p>
-    </div>
-  </div>
-</header>
 
 <section class="py-24 px-6 md:px-12 bg-canvas">
   <div class="max-w-[1600px] mx-auto">
@@ -39,7 +32,7 @@ require INCLUDES_PATH . '/page-start.php';
   </div>
 </section>
 
-<section class="py-24 px-6 md:px-12 bg-surface rounded-3xl mx-2 md:mx-6 overflow-hidden">
+<section class="py-24 px-6 md:px-12 bg-surface border-t border-edge">
   <div class="max-w-[1600px] mx-auto">
     <div class="flex flex-col md:flex-row justify-between items-end mb-20">
       <div class="max-w-2xl">
@@ -72,60 +65,59 @@ require INCLUDES_PATH . '/page-start.php';
   </div>
 </section>
 
-<section class="py-24 px-6 md:px-12 bg-canvas">
+<section class="py-24 px-6 md:px-12 bg-canvas border-t border-edge">
+  <div class="max-w-[1600px] mx-auto">
+    <h2 class="text-lg font-semibold uppercase tracking-wider text-content mb-6">Governance</h2>
+    <p class="text-muted max-w-3xl text-lg leading-relaxed mb-8">Bin Naeem Industries is governed by a board and executive structure that ensures accountability, strategic oversight, and alignment with long-term objectives. Governance practices follow applicable regulatory and corporate standards.</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl">
+      <div class="p-8 border border-edge rounded-2xl bg-surface">
+        <h4 class="font-display text-xl text-content mb-2">Board oversight</h4>
+        <p class="text-muted text-sm leading-relaxed">The board provides strategic direction, risk oversight, and governance of the group and its subsidiaries.</p>
+      </div>
+      <div class="p-8 border border-edge rounded-2xl bg-surface">
+        <h4 class="font-display text-xl text-content mb-2">Executive management</h4>
+        <p class="text-muted text-sm leading-relaxed">Executive leadership is responsible for day-to-day operations, performance, and delivery across all brands.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-24 px-6 md:px-12 bg-surface border-t border-edge">
+  <div class="max-w-[1600px] mx-auto">
+    <h2 class="text-lg font-semibold uppercase tracking-wider text-content mb-6">Operational leadership across brands</h2>
+    <p class="text-muted max-w-3xl text-lg leading-relaxed">Leadership supports multi-brand operations through shared governance, resource allocation, and strategic alignment. Each brand has dedicated management while benefiting from group-wide capabilities in quality, safety, and compliance.</p>
+  </div>
+</section>
+
+<section class="py-24 px-6 md:px-12 bg-canvas border-t border-edge">
   <div class="max-w-[1600px] mx-auto">
     <div class="flex flex-col md:flex-row gap-12 mb-16">
       <div class="md:w-1/3">
-        <h3 class="text-lg font-semibold uppercase tracking-wider text-content">Executive Leadership</h3>
+        <h3 class="text-lg font-semibold uppercase tracking-wider text-content">Leadership roles</h3>
       </div>
       <div class="md:w-2/3">
-        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl text-content leading-tight">Guided by <span class="italic font-light text-muted">experience</span>, driven by <span class="font-bold">insight</span>.</h2>
-        <p class="mt-6 text-muted max-w-2xl">Our leadership team combines decades of expertise across engineering, finance, and global operations to steer Bin Naaem Industries towards a prosperous future.</p>
+        <p class="text-muted max-w-2xl mb-10">Our leadership combines experience across engineering, operations, and global business to steer the group and its brands.</p>
         <?php if (!empty($companyProfileUrl)): ?>
-        <p class="mt-4"><a href="<?php echo htmlspecialchars($companyProfileUrl, ENT_QUOTES, 'UTF-8'); ?>" download class="inline-flex items-center gap-2 text-sm font-semibold text-content hover:underline"><span class="material-icons-outlined text-lg">download</span>Download company profile</a></p>
+        <p class="mb-10"><a href="<?php echo htmlspecialchars($companyProfileUrl, ENT_QUOTES, 'UTF-8'); ?>" download class="inline-flex items-center gap-2 text-sm font-semibold text-content hover:underline"><span class="material-icons-outlined text-lg">download</span>Download company profile</a></p>
         <?php endif; ?>
-      </div>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="bg-surface p-8 md:p-10 rounded-2xl border border-edge hover:border-muted transition-colors group">
-        <div class="mb-8">
-          <h3 class="font-display text-2xl text-content">Dr. Ahmed Al-Naaem</h3>
-          <p class="text-xs font-bold uppercase tracking-widest text-muted mt-2">Chairman of the Board</p>
+        <div class="space-y-6">
+          <div class="border-t border-edge pt-6">
+            <h4 class="font-display text-xl text-content">Board Chair</h4>
+            <p class="text-muted text-sm mt-1">Strategic vision and governance of the group.</p>
+          </div>
+          <div class="border-t border-edge pt-6">
+            <h4 class="font-display text-xl text-content">Chief Executive</h4>
+            <p class="text-muted text-sm mt-1">Overall operations and execution across brands and geographies.</p>
+          </div>
+          <div class="border-t border-edge pt-6">
+            <h4 class="font-display text-xl text-content">Chief Operations</h4>
+            <p class="text-muted text-sm mt-1">Operational excellence, supply chain, and multi-brand coordination.</p>
+          </div>
+          <div class="border-t border-edge pt-6">
+            <h4 class="font-display text-xl text-content">Chief Financial Officer</h4>
+            <p class="text-muted text-sm mt-1">Financial strategy, reporting, and sustainable growth.</p>
+          </div>
         </div>
-        <div class="h-[1px] w-full bg-edge mb-6 group-hover:bg-muted transition-colors"></div>
-        <p class="text-sm text-muted leading-relaxed">With over 40 years of experience in industrial development, Dr. Al-Naaem provides the strategic vision that has established the company as a regional powerhouse.</p>
-      </div>
-      <div class="bg-surface p-8 md:p-10 rounded-2xl border border-edge hover:border-muted transition-colors group">
-        <div class="mb-8">
-          <h3 class="font-display text-2xl text-content">Sarah Jenkins</h3>
-          <p class="text-xs font-bold uppercase tracking-widest text-muted mt-2">Chief Executive Officer</p>
-        </div>
-        <div class="h-[1px] w-full bg-edge mb-6 group-hover:bg-muted transition-colors"></div>
-        <p class="text-sm text-muted leading-relaxed">Sarah brings a wealth of knowledge from global infrastructure projects, driving operational excellence and spearheading international expansion initiatives.</p>
-      </div>
-      <div class="bg-surface p-8 md:p-10 rounded-2xl border border-edge hover:border-muted transition-colors group">
-        <div class="mb-8">
-          <h3 class="font-display text-2xl text-content">Robert Chen</h3>
-          <p class="text-xs font-bold uppercase tracking-widest text-muted mt-2">Chief Operations Officer</p>
-        </div>
-        <div class="h-[1px] w-full bg-edge mb-6 group-hover:bg-muted transition-colors"></div>
-        <p class="text-sm text-muted leading-relaxed">An expert in logistics and supply chain optimization, Robert ensures that our complex network of subsidiaries operates with seamless efficiency.</p>
-      </div>
-      <div class="bg-surface p-8 md:p-10 rounded-2xl border border-edge hover:border-muted transition-colors group">
-        <div class="mb-8">
-          <h3 class="font-display text-2xl text-content">Amina Khalil</h3>
-          <p class="text-xs font-bold uppercase tracking-widest text-muted mt-2">Chief Technology Officer</p>
-        </div>
-        <div class="h-[1px] w-full bg-edge mb-6 group-hover:bg-muted transition-colors"></div>
-        <p class="text-sm text-muted leading-relaxed">Leading our innovation hubs, Amina is dedicated to integrating sustainable energy technologies into every facet of our industrial output.</p>
-      </div>
-      <div class="bg-surface p-8 md:p-10 rounded-2xl border border-edge hover:border-muted transition-colors group">
-        <div class="mb-8">
-          <h3 class="font-display text-2xl text-content">David Ross</h3>
-          <p class="text-xs font-bold uppercase tracking-widest text-muted mt-2">Chief Financial Officer</p>
-        </div>
-        <div class="h-[1px] w-full bg-edge mb-6 group-hover:bg-muted transition-colors"></div>
-        <p class="text-sm text-muted leading-relaxed">David oversees the financial health of the organization, ensuring robust fiscal strategies that support long-term sustainable growth.</p>
       </div>
     </div>
   </div>

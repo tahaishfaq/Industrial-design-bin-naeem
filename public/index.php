@@ -10,11 +10,11 @@ $showWhatsApp = true;
 require INCLUDES_PATH . '/page-start.php';
 ?>
 
-<header class="relative w-full h-screen min-h-[800px] overflow-hidden">
+<header class="relative w-full min-h-[420px] h-[55vh] sm:min-h-[480px] sm:h-[60vh] md:h-screen md:min-h-[700px] overflow-hidden">
   <div class="absolute inset-0 z-0">
     <img
       alt="Modern industrial architecture, Bin Naaem"
-      class="w-full h-full object-cover brightness-[0.95] dark:brightness-[0.4]"
+      class="w-full h-full object-cover object-center brightness-[0.95] dark:brightness-[0.4]"
       src="assets/images/hero-bin.jpg"
       loading="eager"
       width="1600"
@@ -22,35 +22,35 @@ require INCLUDES_PATH . '/page-start.php';
     />
     <div class="absolute inset-0 pointer-events-none hero-scrim"></div>
   </div>
-  <div class="relative z-10 flex flex-col justify-end h-full px-6 md:px-12 pb-20 max-w-[1600px] mx-auto">
-    <div class="mb-12 md:mb-24">
-      <h1 class="font-display text-5xl md:text-7xl lg:text-8xl leading-[1.1] text-content max-w-5xl">
+  <div class="relative z-10 flex flex-col justify-end h-full px-4 sm:px-6 md:px-12 pb-6 pt-20 sm:pb-8 sm:pt-24 md:pb-20 md:pt-0 max-w-[1600px] mx-auto">
+    <div class="mb-6 sm:mb-8 md:mb-12 lg:mb-24">
+      <h1 class="font-display text-3xl leading-tight sm:text-4xl sm:leading-tight md:text-5xl md:leading-[1.1] lg:text-7xl xl:text-8xl text-content max-w-5xl">
         Engineering <br />
         <span class="italic font-light opacity-80">tomorrow's</span>
         industrial <br />
         reality &amp; infrastructure
       </h1>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-end">
-      <div class="col-span-1 md:col-span-5 flex flex-wrap gap-3">
-        <span class="px-6 py-2 rounded-full glass-soft text-sm text-content">Infrastructure</span>
-        <span class="px-6 py-2 rounded-full glass-soft text-sm text-content">Energy</span>
-        <span class="px-6 py-2 rounded-full glass-soft text-sm text-content">Logistics</span>
-        <span class="px-6 py-2 rounded-full glass-soft text-sm text-content">Manufacturing</span>
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 items-end">
+      <div class="col-span-1 md:col-span-5 flex flex-wrap gap-2 sm:gap-3">
+        <span class="px-4 py-1.5 sm:px-6 sm:py-2 rounded-full glass-soft text-xs sm:text-sm text-content">Infrastructure</span>
+        <span class="px-4 py-1.5 sm:px-6 sm:py-2 rounded-full glass-soft text-xs sm:text-sm text-content">Energy</span>
+        <span class="px-4 py-1.5 sm:px-6 sm:py-2 rounded-full glass-soft text-xs sm:text-sm text-content">Logistics</span>
+        <span class="px-4 py-1.5 sm:px-6 sm:py-2 rounded-full glass-soft text-xs sm:text-sm text-content">Manufacturing</span>
       </div>
-      <div class="col-span-1 md:col-span-7 flex justify-end gap-4 overflow-x-auto no-scrollbar">
-        <div class="relative w-64 h-40 rounded-xl overflow-hidden group cursor-pointer border border-white/10 flex-shrink-0">
+      <div class="col-span-1 md:col-span-7 flex justify-end gap-3 sm:gap-4 overflow-x-auto no-scrollbar pb-1 -mx-4 px-4 sm:mx-0 sm:px-0">
+        <div class="relative w-52 h-32 sm:w-64 sm:h-40 rounded-xl overflow-hidden group cursor-pointer border border-white/10 flex-shrink-0">
           <img alt="Wind Turbines" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxmpkE7Vmn9bcdrShBbjhuWneY1D0Ie_TQRlMvjoRhEjjwneVaRIe9NOI98RbJdQI2kxe4ZYB-qUwyU9Xpw8kQbtODZdmf3Dnk9_vBtU1aaIsWN9uNxqLozupOhjkL4ENMgFmjeuDzBjUInjRLE5XvA7TiLWKYd0Ei2Tw1rKhMCNTiXJGnvHD2flwCww2rwxiwHjzrZ2GVRMF1klav4YvT2sQDEivP4M87tj9bJVt2UpbgdoxjSBPYyYSHdyQvgaQvg2w9xqiGchE" loading="lazy" width="256" height="160" />
-          <div class="absolute inset-0 bg-black/40 p-4 flex flex-col justify-end">
-            <span class="text-xs text-white/70 uppercase tracking-wider">Sustainable Energy</span>
-            <p class="text-white font-serif text-lg leading-tight">Project Helios Alpha</p>
+          <div class="absolute inset-0 bg-black/40 p-3 sm:p-4 flex flex-col justify-end">
+            <span class="text-[10px] sm:text-xs text-white/70 uppercase tracking-wider">Sustainable Energy</span>
+            <p class="text-white font-serif text-sm sm:text-lg leading-tight">Project Helios Alpha</p>
           </div>
         </div>
-        <div class="relative w-64 h-40 rounded-xl overflow-hidden group cursor-pointer border border-white/10 hidden sm:block flex-shrink-0">
+        <div class="relative w-52 h-32 sm:w-64 sm:h-40 rounded-xl overflow-hidden group cursor-pointer border border-white/10 hidden sm:block flex-shrink-0">
           <img alt="Industrial Port" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1R0EYTg5dXaDmB_vGLOYt0kizi-lRXsoH7z0bDF4rqER2-qgnGAgHA368rFoshE7A_tGSe1cmCEQYC2MMN_-Pmr6D9fQU6D_mOpWx5nMj_vX6Ogk_oHpTI39_rK2nwxT8hsiPGdeq8ecr1V1_V74CtbSvSLGIRNTAw1F1Isa9BAdYBoAETAryLmdMWFC1jzfZ9dWKWEMITWS8MJiIVbGL9xeX-yycbeRPHPGediCR6J0j_xe-yNGIKTpsHlJPFBAl8twp8m__RDs" loading="lazy" width="256" height="160" />
-          <div class="absolute inset-0 bg-black/40 p-4 flex flex-col justify-end">
-            <span class="text-xs text-white/70 uppercase tracking-wider">Global Logistics</span>
-            <p class="text-white font-serif text-lg leading-tight">Port Expansion IV</p>
+          <div class="absolute inset-0 bg-black/40 p-3 sm:p-4 flex flex-col justify-end">
+            <span class="text-[10px] sm:text-xs text-white/70 uppercase tracking-wider">Global Logistics</span>
+            <p class="text-white font-serif text-sm sm:text-lg leading-tight">Port Expansion IV</p>
           </div>
         </div>
       </div>

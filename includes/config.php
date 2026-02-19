@@ -54,10 +54,13 @@ $companyProfileUrl = $_ENV['COMPANY_PROFILE_URL'] ?? getenv('COMPANY_PROFILE_URL
 // WhatsApp default number (no spaces). Override per-page with $whatsappNumber.
 $waDefaultNumber = '923215707070';
 
-function waUrl($utmContent = 'cta', $number = null) {
+function waUrl($utmContent = 'cta', $number = null, $prefillText = null) {
   global $waDefaultNumber;
   $num = $number !== null ? preg_replace('/\D/', '', $number) : preg_replace('/\D/', '', $waDefaultNumber);
   $params = ['utm_source' => 'website', 'utm_medium' => 'whatsapp', 'utm_campaign' => 'cta', 'utm_content' => $utmContent];
+  if ($prefillText !== null && $prefillText !== '') {
+    $params['text'] = $prefillText;
+  }
   return 'https://wa.me/' . $num . '?' . http_build_query($params);
 }
 

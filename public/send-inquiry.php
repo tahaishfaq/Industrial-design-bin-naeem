@@ -25,6 +25,8 @@ $projectType  = isset($_POST['project_type']) ? trim(strip_tags((string) $_POST[
 $timeline     = isset($_POST['timeline']) ? trim(strip_tags((string) $_POST['timeline'])) : '';
 $budget       = isset($_POST['budget']) ? trim(strip_tags((string) $_POST['budget'])) : '';
 $message      = isset($_POST['message']) ? trim(strip_tags((string) $_POST['message'])) : '';
+$brandName    = isset($_POST['brand_name']) ? trim(strip_tags((string) $_POST['brand_name'])) : '';
+$projectRef   = isset($_POST['project_reference']) ? trim(strip_tags((string) $_POST['project_reference'])) : '';
 
 $valid = true;
 if ($name === '' || strlen($name) < 2) $valid = false;
@@ -79,6 +81,12 @@ try {
   if (!empty($budget)) {
     $htmlBody .= "<p><strong>Budget Range:</strong> " . htmlspecialchars($budget) . "</p>";
   }
+  if (!empty($brandName)) {
+    $htmlBody .= "<p><strong>Brand:</strong> " . htmlspecialchars($brandName) . "</p>";
+  }
+  if (!empty($projectRef)) {
+    $htmlBody .= "<p><strong>Project reference:</strong> " . htmlspecialchars($projectRef) . "</p>";
+  }
   $htmlBody .= "<p><strong>Message:</strong></p>";
   $htmlBody .= "<p style='background: #f5f5f5; padding: 15px; border-radius: 5px; white-space: pre-wrap;'>" . nl2br(htmlspecialchars($message)) . "</p>";
   $htmlBody .= "</body></html>";
@@ -103,6 +111,12 @@ try {
   }
   if (!empty($budget)) {
     $textBody .= "Budget Range: " . htmlspecialchars($budget) . "\n";
+  }
+  if (!empty($brandName)) {
+    $textBody .= "Brand: " . htmlspecialchars($brandName) . "\n";
+  }
+  if (!empty($projectRef)) {
+    $textBody .= "Project reference: " . htmlspecialchars($projectRef) . "\n";
   }
   $textBody .= "\nMessage:\n" . htmlspecialchars($message) . "\n";
   

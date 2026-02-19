@@ -6,6 +6,9 @@ $description = 'Request a quote or book a consultation for industrial design, ma
 $canonical = 'https://binnaeemindustries.com/contact';
 $currentPage = 'contact';
 $showWhatsApp = true;
+$contactPresetIndustry = isset($_GET['industry']) ? trim(strip_tags((string) $_GET['industry'])) : '';
+$contactPresetBrand = isset($_GET['brand']) ? trim(strip_tags((string) $_GET['brand'])) : '';
+$contactPresetProject = isset($_GET['project']) ? trim(strip_tags((string) $_GET['project'])) : '';
 
 require INCLUDES_PATH . '/page-start.php';
 ?>
